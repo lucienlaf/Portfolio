@@ -188,6 +188,11 @@ header p {
     color: #00bfffa2;
 }
 
+.about-details {
+    display: grid;
+    gap: 2rem;
+}
+
 /* Company details */
 .company-details {
     display: grid;
