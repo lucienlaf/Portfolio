@@ -1,4 +1,4 @@
-/* Base styles */
+/* Base */
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +14,7 @@ body {
     overflow-x: hidden;
 }
 
-/* Electric Background */
+/* Background */
 .background {
     position: fixed;
     inset: 0;
