@@ -414,7 +414,7 @@ header p {
     margin-top: 2rem;
 }
 
-.project-item {
+.project-item1 {
     background: rgba(0, 0, 0, 0.4);
     border: 1px solid rgba(0, 149, 255, 0.1);
     border-radius: 1rem;
@@ -423,12 +423,12 @@ header p {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project-item:hover {
+.project-item1:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 30px rgba(0, 149, 255, 0.2);
 }
 
-.project-item img {
+.project-item1 img {
     width: 100%;
     height: 200px;
     text-align: center;
@@ -436,13 +436,81 @@ header p {
     margin-bottom: 20px;
 }
 
-.project-item h3 {
+.project-item1 h3 {
     font-size: 1.5rem;
     margin: 1rem;
     color: #00bfffa2;
 }
 
-.project-item p {
+.project-item1 p {
+    margin: 0 1rem 1rem;
+    color: white;
+    font-size: 1rem;
+}
+
+.project-item2 {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(0, 149, 255, 0.1);
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(0, 149, 255, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item2:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 149, 255, 0.2);
+}
+
+.project-item2 img {
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+.project-item2 h3 {
+    font-size: 1.5rem;
+    margin: 1rem;
+    color: #00bfffa2;
+}
+
+.project-item2 p {
+    margin: 0 1rem 1rem;
+    color: white;
+    font-size: 1rem;
+}
+
+.project-item3 {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(0, 149, 255, 0.1);
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(0, 149, 255, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item3:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 149, 255, 0.2);
+}
+
+.project-item3 img {
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+.project-item3 h3 {
+    font-size: 1.5rem;
+    margin: 1rem;
+    color: #00bfffa2;
+}
+
+.project-item3 p {
     margin: 0 1rem 1rem;
     color: white;
     font-size: 1rem;
