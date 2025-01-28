@@ -430,13 +430,13 @@ header p {
 
 .project-item img {
     width: 100%;
-    height: 150px;
+    height: 250px;
     object-fit: contain;
 }
 
 .project-item h3 {
     font-size: 1.5rem;
-    margin: 1rem;
+    margin: 3rem;
     color: #00bfffa2;
 }
 
