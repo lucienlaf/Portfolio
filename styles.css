@@ -433,6 +433,7 @@ header p {
     height: 200px;
     text-align: center;
     object-fit: contain;
+    margin-bottom: 3px;
 }
 
 .project-item h3 {
