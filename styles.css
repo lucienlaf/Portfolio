@@ -431,6 +431,7 @@ header p {
 .project-item img {
     width: 100%;
     height: 200px;
+    padding: 2px;
     object-fit: contain;
 }
 
