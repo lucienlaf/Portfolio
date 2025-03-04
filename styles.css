@@ -24,7 +24,6 @@ body {
 .background-image {
     position: absolute;
     inset: 0;
-    background-image: url("https://www.hdwallpapers.in/download/white_clouds_blue_sky_building_aetna_anime_background_hd_anime_background-HD.jpg");
     background-size: cover;
     background-position: center;
     filter: brightness(0.7) contrast(1.2);
