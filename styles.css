@@ -66,7 +66,7 @@ body {
     border-radius: 50%;
     border: 2px solid rgba(0, 149, 255, 0.3);
     background: rgba(0, 0, 0, 0);
-    color: #00bfffa2;
+    color: #00e8ec;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -79,7 +79,7 @@ body {
 .nav-button:hover,
 .nav-button.active {
     background: rgba(0, 149, 255, 0.2);
-    border-color: #00bfffa2;
+    border-color: #00e8ec;
     transform: scale(1.1);
     box-shadow: 0 0 20px rgba(0, 149, 255, 0.4);
 }
@@ -110,7 +110,7 @@ body {
     top: 100%;
     width: 2px;
     height: 2rem;
-    background: linear-gradient(to bottom, #00bfffa2, transparent);
+    background: linear-gradient(to bottom, #00e8ec, transparent);
     transform: translateX(-50%);
 }
 
@@ -132,7 +132,7 @@ h1 {
     font-size: 3.75rem;
     font-weight: bold;
     margin-bottom: 1rem;
-    background: linear-gradient(to right, #00bfffa2, #fff);
+    background: linear-gradient(to right, #00e8ec, #fff);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -141,7 +141,7 @@ h1 {
 
 header p {
     font-size: 1.25rem;
-    color: #00bfffa2;
+    color: #00e8ec;
     text-shadow: 0 0 10px rgba(0, 149, 255, 0.5);
 }
 
@@ -170,21 +170,21 @@ header p {
     gap: 1rem;
     font-size: 1.875rem;
     margin-bottom: 1.5rem;
-    color: #00bfffa2;
+    color: #00e8ec;
     text-shadow: 0 0 10px rgba(0, 149, 255, 0.5);
 }
 
 .icon {
     width: 1.5rem;
     height: 1.5rem;
-    color: #00bfffa2;
+    color: #00e8ec;
 }
 
 .icon-small {
     width: 1rem;
     height: 1rem;
     margin-right: 0.5rem;
-    color: #00bfffa2;
+    color: #00e8ec;
 }
 
 .about-details {
@@ -212,7 +212,7 @@ header p {
 }
 
 .detail-item h3 {
-    color: #00bfffa2;
+    color: #00e8ec;
     margin-bottom: 1rem;
     display: flex;
     align-items: center;
@@ -236,7 +236,7 @@ header p {
 }
 
 .skills-grid h3 {
-    color: #00bfffa2;
+    color: #00e8ec;
     margin-bottom: 1rem;
 }
 
@@ -279,7 +279,7 @@ header p {
     left: 0;
     width: 4px;
     height: 100%;
-    background: #00bfffa2;
+    background: #00e8ec;
     box-shadow: 0 0 15px rgba(0, 149, 255, 0.5);
 }
 
@@ -290,7 +290,7 @@ header p {
 }
 
 .education-item h4 {
-    color: #00bfffa2;
+    color: #00e8ec;
     font-size: 1.5rem;
     margin-bottom: 1rem;
     display: flex;
@@ -318,7 +318,7 @@ header p {
 
 .education-item .skill-tag {
     background: rgba(0, 149, 255, 0.1);
-    color: #00bfffa2;
+    color: #00e8ec;
     padding: 0.25rem 0.75rem;
     border-radius: 1rem;
     font-size: 0.875rem;
@@ -438,7 +438,7 @@ header p {
 .project-item1 h3 {
     font-size: 1.5rem;
     margin: 1rem;
-    color: #00bfffa2;
+    color: #00e8ec;
 }
 
 .project-item1 p {
@@ -472,7 +472,7 @@ header p {
 .project-item2 h3 {
     font-size: 1.5rem;
     margin: 1rem;
-    color: #00bfffa2;
+    color: #00e8ec;
 }
 
 .project-item2 p {
@@ -506,7 +506,7 @@ header p {
 .project-item3 h3 {
     font-size: 1.5rem;
     margin: 1rem;
-    color: #00bfffa2;
+    color: #00e8ec;
 }
 
 .project-item3 p {
