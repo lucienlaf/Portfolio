@@ -50,34 +50,6 @@ portfolio/
 └── CV - LAFORÊT Lucien.pdf
 ```
 
----
-
-
-#### Logos de compétences (32x32px recommandé) :
-Placer dans `assets/img/logos/` :
-- `php.svg`
-- `html.svg`
-- `css.svg`
-- `javascript.svg`
-- `python.svg`
-- `sql.svg`
-- `csharp.svg`
-- `linux.svg`
-- `english.svg`
-
-**Où télécharger les logos :**
-- [SVG Repo](https://www.svgrepo.com/) - Gratuit
-- [Simple Icons](https://simpleicons.org/) - Logos de marques
-- [Dev Icons](https://devicon.dev/) - Icônes de développement
-
-#### Icônes d'intérêts (80x80px) :
-Placer dans `assets/img/` :
-- `musculation.svg`
-- `gaming.svg`
-- `anime.svg`
-- `family.svg`
-- `projects.svg`
-
 ### 4. Ajouter les animations Lottie
 
 Télécharger les animations JSON sur [LottieFiles](https://lottiefiles.com/) et les placer dans `assets/lottie/` :
@@ -97,68 +69,12 @@ Télécharger les animations JSON sur [LottieFiles](https://lottiefiles.com/) et
 
 ### Configurer l'envoi d'emails
 
-1. Ouvrir `sendmail.php`
-2. Ligne 18, remplacer :
-```php
-$your_email = "lucien.lafpro@gmail.com"; // Votre email
-```
 3. Uploader sur un hébergeur PHP avec fonction `mail()` activée
 
 **Alternative : Utiliser un service tiers**
 - [Formspree](https://formspree.io/) - Gratuit
 - [EmailJS](https://www.emailjs.com/) - JavaScript only
 - [Web3Forms](https://web3forms.com/) - Simple
-
----
-
-## 🎯 Personnalisation du contenu
-
-### Remplacer votre photo
-
-Ligne 100 dans `index.html` :
-```html
-<div class="photo-placeholder">
-    <img src="assets/img/votre-photo.jpg" alt="LAFORÊT Lucien">
-</div>
-```
-
-### Ajouter la photo SDIS 37
-
-Ligne 479 dans `index.html` :
-```html
-<img src="assets/img/sdis37.jpg" alt="SDIS 37">
-```
-
-### Modifier les projets
-
-Sections **Projet 3** et **Projet 4** (lignes 385-440) :
-- Remplacer les images
-- Changer les titres et descriptions
-- Ajouter les liens vers vos projets
-
-### Ajouter des certifications
-
-Sections **Certification 3** et **Certification 4** (lignes 530-570) :
-- Modifier les titres
-- Changer les statuts et dates
-- Ajouter les liens vers les documents PDF
-
----
-
-### Optimiser les images
-
-- Compresser avec [TinyPNG](https://tinypng.com/)
-- Convertir en WebP pour de meilleures performances
-- Utiliser les dimensions recommandées
-
-### Lazy-load des images
-
-Les animations Lottie sont déjà en lazy-load.
-
-Pour les images, ajouter l'attribut `loading="lazy"` :
-```html
-<img src="image.jpg" alt="Description" loading="lazy">
-```
 
 ---
 
@@ -212,7 +128,6 @@ Les emojis sont utilisés en fallback. Pour les logos :
 
 ---
 
-
 ### Easter egg
 
 Tapez le code Konami (↑ ↑ ↓ ↓ ← → ← → B A) sur votre clavier ! 🎉
@@ -238,6 +153,7 @@ Ce portfolio est libre d'utilisation pour un usage personnel.
 
 - Animations : [LottieFiles](https://lottiefiles.com/)
 - Icônes : [Lucide Icons](https://lucide.dev/)
+- SVG : [SVG Repo](https://www.svgrepo.com/)
 - Polices : Segoe UI (système)
 - Inspirations : Modern web design trends 2024-2025
 
