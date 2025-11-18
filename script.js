@@ -161,54 +161,64 @@ document.addEventListener('DOMContentLoaded', () => {
     // ====================================
     // ANIMATION DES BARRES DE COMPÉTENCES
     // ====================================
-    
+
     const skillItems = document.querySelectorAll('.skill-item');
-    const animatedSkills = new Set();
-    
+    const animatedSkills = new Map();
+
     function animateSkillBar(skillItem) {
-        const skillKey = skillItem.getAttribute('data-key');
+        if (animatedSkills.has(skillItem)) return;
+        animatedSkills.set(skillItem, true);
         
-        // Éviter d'animer plusieurs fois
-        if (animatedSkills.has(skillKey)) return;
-        animatedSkills.add(skillKey);
-        
-        const percent = parseInt(skillItem.getAttribute('data-percent')) || 100;
+        const percent = parseInt(skillItem.getAttribute('data-percent')) || 0;
         const progressBar = skillItem.querySelector('.skill-progress');
         const percentText = skillItem.querySelector('.skill-percent');
         
-        // Animation de la barre
+        if (!progressBar || !percentText) return;
+        
+        progressBar.style.width = '0%';
+        percentText.textContent = '0%';
+        
         setTimeout(() => {
+            progressBar.style.transition = 'width 1.5s cubic-bezier(0.4, 0, 0.2, 1)';
             progressBar.style.width = percent + '%';
+            
+            let currentPercent = 0;
+            const duration = 1500;
+            const fps = 60;
+            const totalFrames = (duration / 1000) * fps;
+            const increment = percent / totalFrames;
+            
+            const animateCounter = () => {
+                currentPercent += increment;
+                
+                if (currentPercent >= percent) {
+                    percentText.textContent = percent + '%';
+                    return;
+                }
+                
+                percentText.textContent = Math.round(currentPercent) + '%';
+                requestAnimationFrame(animateCounter);
+            };
+            
+            requestAnimationFrame(animateCounter);
         }, 100);
-        
-        // Animation du pourcentage
-        let currentPercent = 0;
-        const duration = 1500;
-        const steps = 50;
-        const increment = percent / steps;
-        const stepDuration = duration / steps;
-        
-        const counter = setInterval(() => {
-            currentPercent += increment;
-            if (currentPercent >= percent) {
-                currentPercent = percent;
-                clearInterval(counter);
-            }
-            percentText.textContent = Math.round(currentPercent) + '%';
-        }, stepDuration);
     }
-    
-    // Observer pour les compétences
+
     const skillObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
+        entries.forEach((entry, index) => {
             if (entry.isIntersecting) {
-                animateSkillBar(entry.target);
+                setTimeout(() => {
+                    animateSkillBar(entry.target);
+                }, index * 100);
+                
+                skillObserver.unobserve(entry.target);
             }
         });
     }, {
-        threshold: 0.3
+        threshold: 0.2,
+        rootMargin: '0px 0px -50px 0px'
     });
-    
+
     skillItems.forEach(item => {
         skillObserver.observe(item);
     });

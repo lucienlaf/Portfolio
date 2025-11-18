@@ -188,12 +188,12 @@ body {
 
 .progress-percent {
     position: fixed;
-    top: 70px;
-    left: 20px;
+    top: 5px;
+    left: 10px;
     background: var(--bg-card);
-    padding: 8px 16px;
+    padding: 6px 14px;
     border-radius: 20px;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 600;
     color: var(--violet-primary);
     border: 1px solid var(--border-color);
@@ -1342,10 +1342,10 @@ body {
     }
     
     .progress-percent {
-        top: 10px;
-        left: 10px;
-        font-size: 12px;
-        padding: 6px 12px;
+        top: 5px;
+        left: 5px;
+        font-size: 11px;
+        padding: 5px 10px;
     }
     
     .theme-switch-wrapper {
