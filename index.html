@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAFORÊT Lucien - Portfolio BTS SIO</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Lottie Player CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+</head>
+<body>
+    <!-- 
+    ========================================
+    PATCH APPLIED - UPDATE 2.0
+    ========================================
+    ✅ Mode clair/sombre avec switch
+    ✅ Lottie animations x4 (lazy-loaded)
+    ✅ Skills avec data-percent modifiables
+    ✅ Placeholder photo SDIS 37
+    ✅ 4 projets configurables
+    ✅ 4 certifications (2 remplies + 2 vides)
+    ✅ Violet optimisé pour vidéoprojecteur
+    ✅ Navigation améliorée avec scroll smooth
+    
+    INSTRUCTIONS DE PERSONNALISATION :
+    - Images : placer dans /assets/img/
+    - Lottie : placer dans /assets/lottie/
+    - Skills : modifier l'attribut data-percent de chaque .skill-item
+    - Photo SDIS 37 : ligne 185 (remplacer src)
+    - Projets : sections projet-card (4 au total)
+    - Formulaire : configurer sendmail.php avec votre email
+    ========================================
+    -->
+
+    <!-- Barre de progression du scroll -->
+    <div class="scroll-progress">
+        <div class="progress-bar"></div>
+        <div class="progress-percent">0%</div>
+    </div>
+
+    <!-- Switch Mode Clair/Sombre -->
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="theme-checkbox">
+            <input type="checkbox" id="theme-checkbox">
+            <div class="slider">
+                <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"/>
+                    <line x1="12" y1="1" x2="12" y2="3"/>
+                    <line x1="12" y1="21" x2="12" y2="23"/>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                    <line x1="1" y1="12" x2="3" y2="12"/>
+                    <line x1="21" y1="12" x2="23" y2="12"/>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                </svg>
+                <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                </svg>
+            </div>
+        </label>
+    </div>
+
+    <!-- Navigation fixe à droite -->
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li><a href="#accueil" class="nav-link active" data-section="accueil">Accueil</a></li>
+            <li><a href="#interets" class="nav-link" data-section="interets">Intérêts</a></li>
+            <li><a href="#competences" class="nav-link" data-section="competences">Compétences</a></li>
+            <li><a href="#projets" class="nav-link" data-section="projets">Projets</a></li>
+            <li><a href="#formations" class="nav-link" data-section="formations">Formations</a></li>
+            <li><a href="#entreprise" class="nav-link" data-section="entreprise">Entreprise</a></li>
+            <li><a href="#certifications" class="nav-link" data-section="certifications">Certifications</a></li>
+            <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Page 1 - Accueil -->
+    <section id="accueil" class="section section-accueil">
+        <div class="container">
+            <div class="accueil-content">
+                <div class="photo-container">
+                    <!-- Animation Lottie #1 - Accueil -->
+                    <div class="lottie-container" id="lottie-accueil" data-lottie="assets/lottie/developer.json"></div>
+                    <div class="photo-placeholder">
+                        <!-- INSTRUCTION: Remplacer par votre photo -->
+                        <!-- <img src="assets/img/votre-photo.jpg" alt="LAFORÊT Lucien"> -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/>
+                            <circle cx="12" cy="7" r="4"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="accueil-text">
+                    <h1 class="accueil-title">LAFORÊT Lucien</h1>
+                    <h2 class="accueil-subtitle">BTS SIO - Option SLAM</h2>
+                    <div class="accueil-description">
+                        <p>Étudiant en deuxième année de BTS Services Informatiques aux Organisations, spécialité Solutions Logicielles et Applications Métiers.</p>
+                        <p>Passionné par le développement web et les nouvelles technologies depuis mon plus jeune âge.</p>
+                    </div>
+                    <a href="#contact" class="cta-button">Me Contacter</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page 2 - Centres d'intérêts & Objectifs -->
+    <section id="interets" class="section">
+        <div class="container">
+            <h2 class="section-title">Centres d'Intérêts & Objectifs</h2>
+            <div class="interets-grid">
+                <div class="card card-interets">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/>
+                        </svg>
+                    </div>
+                    <h3>Centres d'Intérêt</h3>
+                    <div class="interets-icons">
+                        <!-- INSTRUCTION: Remplacer par vos propres images/logos -->
+                        <!-- Images recommandées: 80x80px, SVG ou PNG, dans assets/img/ -->
+                        <div class="interet-item" data-tooltip="Musculation">
+                            <img src="assets/img/musculation.svg" alt="Musculation" onerror="this.style.display='none'">
+                            <span class="interet-fallback">💪</span>
+                            <p>Musculation</p>
+                        </div>
+                        <div class="interet-item" data-tooltip="Jeux vidéos">
+                            <img src="assets/img/gaming.svg" alt="Jeux vidéos" onerror="this.style.display='none'">
+                            <span class="interet-fallback">🎮</span>
+                            <p>Jeux vidéos</p>
+                        </div>
+                        <div class="interet-item" data-tooltip="Animés/Mangas">
+                            <img src="assets/img/anime.svg" alt="Animés/Mangas" onerror="this.style.display='none'">
+                            <span class="interet-fallback">📺</span>
+                            <p>Animés/Mangas</p>
+                        </div>
+                        <div class="interet-item" data-tooltip="Famille et Amis">
+                            <img src="assets/img/family.svg" alt="Famille et Amis" onerror="this.style.display='none'">
+                            <span class="interet-fallback">👨‍👩‍👦</span>
+                            <p>Famille & Amis</p>
+                        </div>
+                        <div class="interet-item" data-tooltip="Projets personnels">
+                            <img src="assets/img/projects.svg" alt="Projets personnels" onerror="this.style.display='none'">
+                            <span class="interet-fallback">💻</span>
+                            <p>Projets perso</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card-objectifs">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="m22 11.08.12-3.67a2 2 0 0 0-2-2.12l-15.24.4a2 2 0 0 0-1.95 1.93l-.37 11.19a2 2 0 0 0 1.95 2.07l15.24-.4a2 2 0 0 0 1.95-1.93l.3-9.47"/>
+                            <path d="m21 11 2-2-2-2"/>
+                        </svg>
+                    </div>
+                    <h3>Objectifs Professionnels</h3>
+                    <ul class="objectifs-list">
+                        <li>Obtenir une Licence (BAC +3) en Concepteur Développeur d'Applications</li>
+                        <li>Acquérir des connaissances techniques approfondies en développement</li>
+                        <li>Développer mes compétences en développement web et applications</li>
+                        <li>Faire du développement mon métier</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page 3 - Compétences -->
+    <section id="competences" class="section">
+        <div class="container">
+            <div class="section-header-with-lottie">
+                <h2 class="section-title">Mes Compétences</h2>
+                <!-- Animation Lottie #2 - Compétences -->
+                <div class="lottie-container lottie-small" id="lottie-skills" data-lottie="assets/lottie/coding.json"></div>
+            </div>
+            
+            <!-- INSTRUCTION: Modifier data-percent pour changer les pourcentages (0-100) -->
+            <div class="skills-container">
+                <div class="skill-item" data-percent="55" data-key="php">
+                    <div class="skill-header">
+                        <div class="skill-info">
+                            <img src="assets/img/logos/codeigniter.svg" alt="CodeIgniter" class="skill-logo" onerror="this.style.display='none'">
+                            <span class="skill-name">Framework CodeIgniter 4</span>
+                        </div>
+                        <span class="skill-percent">55%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 0%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item" data-percent="65" data-key="php">
+                    <div class="skill-header">
+                        <div class="skill-info">
+                            <img src="assets/img/logos/php.svg" alt="PHP" class="skill-logo" onerror="this.style.display='none'">
+                            <span class="skill-name">PHP</span>
+                        </div>
+                        <span class="skill-percent">65%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 0%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item" data-percent="70" data-key="html">
+                    <div class="skill-header">
+                        <div class="skill-info">
+                            <img src="assets/img/logos/html.svg" alt="HTML" class="skill-logo" onerror="this.style.display='none'">
+                            <span class="skill-name">HTML</span>
+                        </div>
+                        <span class="skill-percent">70%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 0%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item" data-percent="25" data-key="css">
+                    <div class="skill-header">
+                        <div class="skill-info">
+                            <img src="assets/img/logos/css.svg" alt="CSS" class="skill-logo" onerror="this.style.display='none'">
+                            <span class="skill-name">CSS</span>
+                        </div>
+                        <span class="skill-percent">25%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 0%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item" data-percent="15" data-key="javascript">
+                    <div class="skill-header">
+                        <div class="skill-info">
+                            <img src="assets/img/logos/javascript.svg" alt="JavaScript" class="skill-logo" onerror="this.style.display='none'">
+                            <span class="skill-name">JavaScript</span>
+                        </div>
+                        <span class="skill-percent">15%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 0%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item" data-percent="75" data-key="sql">
+                    <div class="skill-header">
+                        <div class="skill-info">
+                            <img src="assets/img/logos/sql.svg" alt="SQL" class="skill-logo" onerror="this.style.display='none'">
+                            <span class="skill-name">SQL</span>
+                        </div>
+                        <span class="skill-percent">75%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 0%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item" data-percent="65" data-key="csharp">
+                    <div class="skill-header">
+                        <div class="skill-info">
+                            <img src="assets/img/logos/csharp.svg" alt="C#" class="skill-logo" onerror="this.style.display='none'">
+                            <span class="skill-name">C#</span>
+                        </div>
+                        <span class="skill-percent">65%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 0%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item" data-percent="55" data-key="python">
+                    <div class="skill-header">
+                        <div class="skill-info">
+                            <img src="assets/img/logos/python.svg" alt="Python" class="skill-logo" onerror="this.style.display='none'">
+                            <span class="skill-name">Python</span>
+                        </div>
+                        <span class="skill-percent">55%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 0%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item" data-percent="35" data-key="linux">
+                    <div class="skill-header">
+                        <div class="skill-info">
+                            <img src="assets/img/logos/linux.svg" alt="Linux" class="skill-logo" onerror="this.style.display='none'">
+                            <span class="skill-name">Linux</span>
+                        </div>
+                        <span class="skill-percent">35%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 0%"></div>
+                    </div>
+                </div>
+
+                <!-- Anglais enlevé, à voir si à remettre -->
+                <!-- <div class="skill-item" data-percent="100" data-key="anglais">
+                    <div class="skill-header">
+                        <div class="skill-info">
+                            <img src="assets/img/logos/english.svg" alt="Anglais" class="skill-logo" onerror="this.style.display='none'">
+                            <span class="skill-name">Anglais (BTS SIO)</span>
+                        </div>
+                        <span class="skill-percent">100%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 0%"></div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Page 4 - Projets -->
+    <section id="projets" class="section">
+        <div class="container">
+            <div class="section-header-with-lottie">
+                <h2 class="section-title">Mes Projets</h2>
+                <!-- Animation Lottie #3 - Projets -->
+                <div class="lottie-container lottie-small" id="lottie-projects" data-lottie="assets/lottie/project.json"></div>
+            </div>
+            
+            <!-- INSTRUCTION: 4 projets configurables -->
+            <div class="projets-grid">
+                <!-- Projet 1 -->
+                <div class="projet-card">
+                    <div class="projet-image">
+                        <img src="image_chifoumi.PNG" alt="Jeu Chifoumi">
+                    </div>
+                    <div class="projet-content">
+                        <h3>Chifoumi</h3>
+                        <p>Mini-jeu consistant à choisir entre pierre, feuille ou ciseaux contre l'ordinateur.</p>
+                        <div class="projet-tags">
+                            <span class="tag"><img src="assets/img/logos/csharp.svg" alt="C#" onerror="this.style.display='none'">C#</span>
+                            <span class="tag">WinForms</span>
+                        </div>
+                        <a href="#" class="projet-link">Voir le projet →</a>
+                    </div>
+                </div>
+
+                <!-- Projet 2 -->
+                <div class="projet-card">
+                    <div class="projet-image">
+                        <img src="image_memory.PNG" alt="Jeu Memory">
+                    </div>
+                    <div class="projet-content">
+                        <h3>Memory</h3>
+                        <p>Mini-jeu consistant à choisir un nombre de paires et les images des cartes, le but est de les retrouver.</p>
+                        <div class="projet-tags">
+                            <span class="tag"><img src="assets/img/logos/csharp.svg" alt="C#" onerror="this.style.display='none'">C#</span>
+                            <span class="tag">WinForms</span>
+                        </div>
+                        <a href="#" class="projet-link">Voir le projet →</a>
+                    </div>
+                </div>
+
+                <!-- Projet 3 - NOUVEAU -->
+                <div class="projet-card">
+                    <div class="projet-image">
+                        <!-- INSTRUCTION: Remplacer par votre image -->
+                        <img src="assets/img/projet3.png" alt="Projet 3" onerror="this.parentElement.innerHTML='<div class=projet-placeholder>Projet 3</div>'">
+                    </div>
+                    <div class="projet-content">
+                        <h3>Votre Projet 3</h3>
+                        <p>Description de votre troisième projet. Remplacez ce texte par la description réelle.</p>
+                        <div class="projet-tags">
+                            <span class="tag"><img src="assets/img/logos/html.svg" alt="HTML" onerror="this.style.display='none'">HTML</span>
+                            <span class="tag"><img src="assets/img/logos/css.svg" alt="CSS" onerror="this.style.display='none'">CSS</span>
+                        </div>
+                        <a href="#" class="projet-link">Voir le projet →</a>
+                    </div>
+                </div>
+
+                <!-- Projet 4 - NOUVEAU -->
+                <div class="projet-card">
+                    <div class="projet-image">
+                        <!-- INSTRUCTION: Remplacer par votre image -->
+                        <img src="assets/img/projet4.png" alt="Projet 4" onerror="this.parentElement.innerHTML='<div class=projet-placeholder>Projet 4</div>'">
+                    </div>
+                    <div class="projet-content">
+                        <h3>Votre Projet 4</h3>
+                        <p>Description de votre quatrième projet. Remplacez ce texte par la description réelle.</p>
+                        <div class="projet-tags">
+                            <span class="tag"><img src="assets/img/logos/php.svg" alt="PHP" onerror="this.style.display='none'">PHP</span>
+                            <span class="tag"><img src="assets/img/logos/sql.svg" alt="SQL" onerror="this.style.display='none'">SQL</span>
+                        </div>
+                        <a href="#" class="projet-link">Voir le projet →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page 5 - Formations & Stages -->
+    <section id="formations" class="section">
+        <div class="container">
+            <h2 class="section-title">Formations & Stages</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2024 - En cours</div>
+                        <h3>BTS SIO option SLAM</h3>
+                        <p>Services Informatiques aux Organisations - Solutions Logicielles et Applications Métiers</p>
+                        <div class="timeline-tags">
+                            <span class="tag">Développement Web</span>
+                            <span class="tag">Base de données</span>
+                            <span class="tag">Programmation</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2021 - 2024</div>
+                        <h3>BAC PRO SN RISC</h3>
+                        <p>Systèmes Numériques option Réseaux Informatiques et Systèmes Communicants - Mention BIEN</p>
+                        <div class="timeline-tags">
+                            <span class="tag">Réseaux</span>
+                            <span class="tag">Systèmes</span>
+                            <span class="tag">Maintenance</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Mai - Juin 2023</div>
+                        <h3>Stage CNAV - Tours Nord</h3>
+                        <p>Service Informatique, Masterisation et Brassage de baie</p>
+                        <div class="timeline-tags">
+                            <span class="tag">Support technique</span>
+                            <span class="tag">Infrastructure</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Janvier - Février 2023</div>
+                        <h3>Stage Artéfacts - Tours</h3>
+                        <p>HTML, CSS et JavaScript</p>
+                        <div class="timeline-tags">
+                            <span class="tag">Développement Web</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page 6 - Entreprise -->
+    <section id="entreprise" class="section">
+        <div class="container">
+            <h2 class="section-title">Mon Entreprise d'Alternance</h2>
+            <div class="entreprise-content">
+                <div class="entreprise-header">
+                    <!-- INSTRUCTION: Photo SDIS 37 - Remplacer src ci-dessous -->
+                    <!-- Recommandation: image 800x400px, format JPG/PNG, dans assets/img/ -->
+                    <div class="entreprise-photo">
+                        <img src="assets/img/sdis37.jpg" alt="SDIS 37" onerror="this.parentElement.innerHTML='<div class=photo-placeholder-sdis><svg xmlns=http://www.w3.org/2000/svg viewBox=0 0 24 24 fill=none stroke=currentColor stroke-width=2><rect x=3 y=3 width=18 height=18 rx=2/><circle cx=8.5 cy=8.5 r=1.5/><path d=M21 15l-5-5L5 21/></svg><p>Photo SDIS 37</p></div>'">
+                    </div>
+                    <h3>SDIS 37</h3>
+                    <p class="entreprise-localisation">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        La Haute Limougère, Route de Saint-Roch, 37230 Fondettes
+                    </p>
+                </div>
+                <div class="entreprise-grid">
+                    <div class="entreprise-card">
+                        <h4>Secteur d'activité</h4>
+                        <p>Le SDIS 37 est chargé de l'analyse des risques et de la mise en place des moyens de secours. Il organise l'activité de l'ensemble des centres de sapeurs-pompiers du département 37.</p>
+                    </div>
+                    <div class="entreprise-card">
+                        <h4>Mes Missions</h4>
+                        <ul>
+                            <li>Améliorations d'outils WEB</li>
+                            <li>Support technique aux utilisateurs</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page 7 - Certifications -->
+    <section id="certifications" class="section">
+        <div class="container">
+            <h2 class="section-title">Certifications & Diplômes</h2>
+            <!-- INSTRUCTION: 4 emplacements (2 remplis + 2 vides à personnaliser) -->
+            <div class="certifications-grid">
+                <!-- Certification 1 -->
+                <div class="certification-card">
+                    <div class="certification-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 13V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h8"/>
+                            <path d="m21 15-3-3-3 3"/>
+                            <path d="M18 12v6"/>
+                        </svg>
+                    </div>
+                    <h3>BTS SIO SLAM</h3>
+                    <p class="cert-status">En cours d'obtention</p>
+                    <p class="cert-date">2024 - 2026</p>
+                    <button class="cert-button" disabled>En cours</button>
+                </div>
+
+                <!-- Certification 2 -->
+                <div class="certification-card">
+                    <div class="certification-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="8" r="6"/>
+                            <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/>
+                        </svg>
+                    </div>
+                    <h3>BAC PRO SN RISC</h3>
+                    <p class="cert-status">Mention BIEN</p>
+                    <p class="cert-date">2024</p>
+                    <a href="assets/documents/bac-pro.pdf" class="cert-button" target="_blank">Voir le diplôme</a>
+                </div>
+
+                <!-- Certification 3 - VIDE -->
+                <div class="certification-card certification-empty">
+                    <div class="certification-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                            <line x1="12" y1="18" x2="12" y2="12"/>
+                            <line x1="9" y1="15" x2="15" y2="15"/>
+                        </svg>
+                    </div>
+                    <h3>Votre Certification 3</h3>
+                    <p class="cert-status">À venir</p>
+                    <p class="cert-date">202X</p>
+                    <button class="cert-button" disabled>Non disponible</button>
+                </div>
+
+                <!-- Certification 4 - VIDE -->
+                <div class="certification-card certification-empty">
+                    <div class="certification-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                            <line x1="12" y1="18" x2="12" y2="12"/>
+                            <line x1="9" y1="15" x2="15" y2="15"/>
+                        </svg>
+                    </div>
+                    <h3>Votre Certification 4</h3>
+                    <p class="cert-status">À venir</p>
+                    <p class="cert-date">202X</p>
+                    <button class="cert-button" disabled>Non disponible</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page 8 - Contact -->
+    <section id="contact" class="section section-contact">
+        <div class="container">
+            <h2 class="section-title">Contactez-moi</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="alert-recherche">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 16v-4"/>
+                            <path d="M12 8h.01"/>
+                        </svg>
+                        <p><strong>Recherche alternance 2026–2027</strong><br>pour un Bac+3 Concepteur Développeur d'Applications</p>
+                    </div>
+                    <div class="info-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect width="20" height="16" x="2" y="4" rx="2"/>
+                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                        </svg>
+                        <div>
+                            <strong>Email</strong>
+                            <a href="mailto:lucien.lafpro@gmail.com">lucien.lafpro@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                        <div>
+                            <strong>Établissement</strong>
+                            <p>ISCB Tours</p>
+                        </div>
+                    </div>
+                    <div class="contact-links">
+                        <a href="CV%20-%20LAFORÊT%20Lucien.pdf" target="_blank" class="contact-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
+                                <polyline points="14 2 14 8 20 8"/>
+                            </svg>
+                            Mon CV
+                        </a>
+                        <a href="https://www.linkedin.com/in/lucien-laforêt-345253337" target="_blank" class="contact-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                <rect width="4" height="12" x="2" y="9"/>
+                                <circle cx="4" cy="4" r="2"/>
+                            </svg>
+                            LinkedIn
+                        </a>
+                        <a href="https://github.com/lucienlaf" target="_blank" class="contact-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/>
+                                <path d="M9 18c-4.51 2-5-2-7-2"/>
+                            </svg>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form-container">
+                    <!-- INSTRUCTION: Pour activer l'envoi d'emails -->
+                    <!-- 1. Configurer sendmail.php avec votre adresse email -->
+                    <!-- 2. Uploader le fichier sur votre hébergeur -->
+                    <!-- 3. Vérifier que PHP mail() est activé chez votre hébergeur -->
+                    <form class="contact-form" action="sendmail.php" method="POST">
+                        <div class="form-group">
+                            <label for="name">Nom complet</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Sujet</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Envoyer le message</button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Animation Lottie #4 - Contact (footer) -->
+            <div class="lottie-container lottie-footer" id="lottie-contact" data-lottie="assets/lottie/email.json"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Copyright © LAFORÊT Lucien - 2025</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
