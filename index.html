@@ -10,28 +10,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
 </head>
 <body>
-    <!-- 
-    ========================================
-    PATCH APPLIED - UPDATE 2.0
-    ========================================
-    ✅ Mode clair/sombre avec switch
-    ✅ Lottie animations x4 (lazy-loaded)
-    ✅ Skills avec data-percent modifiables
-    ✅ Placeholder photo SDIS 37
-    ✅ 4 projets configurables
-    ✅ 4 certifications (2 remplies + 2 vides)
-    ✅ Violet optimisé pour vidéoprojecteur
-    ✅ Navigation améliorée avec scroll smooth
-    
-    INSTRUCTIONS DE PERSONNALISATION :
-    - Images : placer dans /assets/img/
-    - Lottie : placer dans /assets/lottie/
-    - Skills : modifier l'attribut data-percent de chaque .skill-item
-    - Photo SDIS 37 : ligne 185 (remplacer src)
-    - Projets : sections projet-card (4 au total)
-    - Formulaire : configurer sendmail.php avec votre email
-    ========================================
-    -->
 
     <!-- Barre de progression du scroll -->
     <div class="scroll-progress">
@@ -84,7 +62,6 @@
                     <!-- Animation Lottie #1 - Accueil -->
                     <div class="lottie-container" id="lottie-accueil" data-lottie="assets/lottie/developer.json"></div>
                     <div class="photo-placeholder">
-                        <!-- INSTRUCTION: Remplacer par votre photo -->
                         <!-- <img src="assets/img/votre-photo.jpg" alt="LAFORÊT Lucien"> -->
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                             <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/>
@@ -118,8 +95,7 @@
                     </div>
                     <h3>Centres d'Intérêt</h3>
                     <div class="interets-icons">
-                        <!-- INSTRUCTION: Remplacer par vos propres images/logos -->
-                        <!-- Images recommandées: 80x80px, SVG ou PNG, dans assets/img/ -->
+                        <!-- Images & Logos à remplacer en SVG ou PNG dans assets/img -->
                         <div class="interet-item" data-tooltip="Musculation">
                             <img src="assets/img/musculation.svg" alt="Musculation" onerror="this.style.display='none'">
                             <span class="interet-fallback">💪</span>
@@ -175,7 +151,6 @@
                 <div class="lottie-container lottie-small" id="lottie-skills" data-lottie="assets/lottie/coding.json"></div>
             </div>
             
-            <!-- INSTRUCTION: Modifier data-percent pour changer les pourcentages (0-100) -->
             <div class="skills-container">
                 <div class="skill-item" data-percent="55" data-key="php">
                     <div class="skill-header">
@@ -320,7 +295,6 @@
                 <div class="lottie-container lottie-small" id="lottie-projects" data-lottie="assets/lottie/project.json"></div>
             </div>
             
-            <!-- INSTRUCTION: 4 projets configurables -->
             <div class="projets-grid">
                 <!-- Projet 1 -->
                 <div class="projet-card">
@@ -354,7 +328,7 @@
                     </div>
                 </div>
 
-                <!-- Projet 3 - NOUVEAU -->
+                <!-- Projet 3 -->
                 <div class="projet-card">
                     <div class="projet-image">
                         <!-- INSTRUCTION: Remplacer par votre image -->
@@ -371,10 +345,9 @@
                     </div>
                 </div>
 
-                <!-- Projet 4 - NOUVEAU -->
+                <!-- Projet 4 -->
                 <div class="projet-card">
                     <div class="projet-image">
-                        <!-- INSTRUCTION: Remplacer par votre image -->
                         <img src="assets/img/projet4_.PNG" alt="Projet 4" onerror="this.parentElement.innerHTML='<div class=projet-placeholder>Projet 4</div>'">
                     </div>
                     <div class="projet-content">
@@ -455,10 +428,8 @@
             <h2 class="section-title">Mon Entreprise d'Alternance</h2>
             <div class="entreprise-content">
                 <div class="entreprise-header">
-                    <!-- INSTRUCTION: Photo SDIS 37 - Remplacer src ci-dessous -->
-                    <!-- Recommandation: image 800x400px, format JPG/PNG, dans assets/img/ -->
                     <div class="entreprise-photo">
-                        <img src="assets/img/sdis37.jpg" alt="SDIS 37" onerror="this.parentElement.innerHTML='<div class=photo-placeholder-sdis><svg xmlns=http://www.w3.org/2000/svg viewBox=0 0 24 24 fill=none stroke=currentColor stroke-width=2><rect x=3 y=3 width=18 height=18 rx=2/><circle cx=8.5 cy=8.5 r=1.5/><path d=M21 15l-5-5L5 21/></svg><p>Photo SDIS 37</p></div>'">
+                        <img src="assets/img/sdis37.PNG" alt="SDIS 37" onerror="this.parentElement.innerHTML='<div class=photo-placeholder-sdis><svg xmlns=http://www.w3.org/2000/svg viewBox=0 0 24 24 fill=none stroke=currentColor stroke-width=2><rect x=3 y=3 width=18 height=18 rx=2/><circle cx=8.5 cy=8.5 r=1.5/><path d=M21 15l-5-5L5 21/></svg><p>Photo SDIS 37</p></div>'">
                     </div>
                     <h3>SDIS 37</h3>
                     <p class="entreprise-localisation">
@@ -490,7 +461,6 @@
     <section id="certifications" class="section">
         <div class="container">
             <h2 class="section-title">Certifications & Diplômes</h2>
-            <!-- INSTRUCTION: 4 emplacements (2 remplis + 2 vides à personnaliser) -->
             <div class="certifications-grid">
                 <!-- Certification 1 -->
                 <div class="certification-card">
@@ -587,7 +557,7 @@
                         </svg>
                         <div>
                             <strong>Établissement</strong>
-                            <p>ISCB Tours</p>
+                            <p>ISCB - Tours</p>
                         </div>
                     </div>
                     <div class="contact-links">
@@ -616,10 +586,7 @@
                     </div>
                 </div>
                 <div class="contact-form-container">
-                    <!-- INSTRUCTION: Pour activer l'envoi d'emails -->
-                    <!-- 1. Configurer sendmail.php avec votre adresse email -->
-                    <!-- 2. Uploader le fichier sur votre hébergeur -->
-                    <!-- 3. Vérifier que PHP mail() est activé chez votre hébergeur -->
+                    <!-- Vérifier que PHP mail() est activé chez votre hébergeur -->
                     <form class="contact-form" action="sendmail.php" method="POST">
                         <div class="form-group">
                             <label for="name">Nom complet</label>
