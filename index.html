@@ -8,6 +8,12 @@
     
     <!-- Lottie Player CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init("VFPj8VxOJ9ynLfF_c");
+    })();
+    </script>
 </head>
 <body>
 
@@ -551,15 +557,14 @@
                     </div>
                 </div>
                 <div class="contact-form-container">
-                    <!-- Vérifier que PHP mail() est activé chez votre hébergeur -->
-                    <form class="contact-form" action="sendmail.php" method="POST">
+                    <form class="contact-form" id="contact-form">
                         <div class="form-group">
                             <label for="name">Nom & Prénom</label>
-                            <input type="text" id="name" name="name" required>
+                            <input type="text" id="name" name="from_name" required>
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
+                            <input type="email" id="email" name="from_email" required>
                         </div>
                         <div class="form-group">
                             <label for="subject">Sujet</label>
@@ -570,6 +575,7 @@
                             <textarea id="message" name="message" rows="5" required></textarea>
                         </div>
                         <button type="submit" class="submit-btn">Envoyer le message</button>
+                        <div id="form-status" style="margin-top: 15px; text-align: center;"></div>
                     </form>
                 </div>
             </div>

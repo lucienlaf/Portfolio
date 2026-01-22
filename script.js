@@ -530,3 +530,25 @@ window.portfolioUtils = {
     updateSkillPercent,
     setTheme
 };
+
+const contactForm = document.getElementById('contact-form');
+const formStatus = document.getElementById('form-status');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Afficher un loader
+        formStatus.innerHTML = '<p style="color: var(--violet-primary);">Envoi en cours...</p>';
+        
+        // Envoyer l'email via EmailJS
+        emailjs.sendForm('service_ocyer5w', 'template_gi3g5px', this)
+            .then(function() {
+                formStatus.innerHTML = '<p style="color: #4ADE80;">✓ Message envoyé avec succès !</p>';
+                contactForm.reset();
+            }, function(error) {
+                formStatus.innerHTML = '<p style="color: #F87171;">✗ Erreur lors de l\'envoi. Veuillez réessayer.</p>';
+                console.error('Erreur:', error);
+            });
+    });
+}
