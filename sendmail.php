@@ -176,7 +176,7 @@ if (empty($errors)) {
         header("Location: " . $redirect_url . "?success=1");
         exit();
     } else {
-        $errors[] = "Erreur lors de l'envoi. Contactez-moi directement par email.";
+        $errors[] = "Erreur lors de l'envoi. Contactez-moi directement par email (lucien.lafpro@gmail.com).";
     }
 }
 
