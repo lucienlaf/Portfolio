@@ -803,69 +803,151 @@ body {
 /* ====================================
    TIMELINE (FORMATIONS)
    ==================================== */
-.timeline {
+/* ====================================
+   TIMELINE DUALE (Formations / Stages)
+   ==================================== */
+.timeline-dual {
     position: relative;
-    padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 10px 0;
 }
 
-.timeline::before {
-    content: '';
+/* Ligne verticale centrale */
+.timeline-axis {
     position: absolute;
-    left: 20px;
+    left: 50%;
+    transform: translateX(-50%);
     top: 0;
     bottom: 0;
-    width: 2px;
+    width: 3px;
     background: linear-gradient(180deg, var(--violet-primary), var(--accent-primary));
+    z-index: 0;
+    border-radius: 3px;
 }
 
-.timeline-item {
+/* Chaque rangée de la timeline */
+.timeline-row {
+    display: grid;
+    grid-template-columns: 1fr 40px 1fr;
+    align-items: center;
+    gap: 0;
+    margin-bottom: 30px;
     position: relative;
-    margin-bottom: 50px;
+}
+
+/* Côté gauche et droit */
+.timeline-side {
+    padding: 10px 20px;
+}
+
+.timeline-side.left {
+    text-align: right;
+}
+
+.timeline-side.right {
+    text-align: left;
+}
+
+.timeline-side.empty {
+    min-height: 20px;
+}
+
+/* Point central */
+.timeline-center-dot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
 }
 
 .timeline-dot {
-    position: absolute;
-    left: -38px;
-    top: 8px;
-    width: 16px;
-    height: 16px;
+    width: 18px;
+    height: 18px;
     background: var(--violet-primary);
     border: 3px solid var(--bg-primary);
     border-radius: 50%;
-    box-shadow: 0 0 0 3px var(--border-color);
+    box-shadow: 0 0 0 3px var(--violet-primary);
+    flex-shrink: 0;
 }
 
+.timeline-dot.stage-dot {
+    background: var(--accent-primary);
+    box-shadow: 0 0 0 3px var(--accent-primary);
+}
+
+/* Carte de contenu */
 .timeline-content {
     background: var(--bg-card);
-    padding: 25px;
+    padding: 22px;
     border-radius: 15px;
     border: 1px solid var(--border-color);
     transition: all 0.3s ease;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.timeline-content.formation {
+    border-left: 4px solid var(--violet-primary);
+}
+
+.timeline-content.stage {
+    border-left: 4px solid var(--accent-primary);
+}
+
+.timeline-side.left .timeline-content {
+    border-left: none;
+    border-right: 4px solid var(--violet-primary);
+    text-align: right;
+}
+
+.timeline-side.left .timeline-content.formation {
+    border-left: none;
+    border-right: 4px solid var(--violet-primary);
+}
+
+.timeline-side.left .timeline-tags {
+    justify-content: flex-end;
 }
 
 .timeline-content:hover {
-    transform: translateX(10px);
     border-color: var(--violet-primary);
     box-shadow: 0 10px 30px var(--shadow-color);
+    transform: scale(1.02);
+}
+
+/* Label Formation / Stage */
+.timeline-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-secondary);
+    margin-bottom: 6px;
+    opacity: 0.7;
 }
 
 .timeline-date {
     color: var(--accent-primary);
     font-size: 14px;
     font-weight: 600;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .timeline-content h3 {
-    font-size: 22px;
+    font-size: 20px;
     color: var(--violet-primary);
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .timeline-content p {
     color: var(--text-secondary);
-    margin-bottom: 15px;
+    margin-bottom: 14px;
     line-height: 1.6;
+    font-size: 15px;
 }
 
 .timeline-tags {
@@ -1383,13 +1465,13 @@ body {
         grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
     }
     
-    .timeline {
-        padding-left: 30px;
-    }
-    
-    .timeline-dot {
-        left: -28px;
-    }
+    .timeline-dual { padding: 0 10px; }
+    .timeline-axis { left: 10px; transform: none; }
+    .timeline-row { grid-template-columns: 0px 30px 1fr; }
+    .timeline-side.left { display: none; }
+    .timeline-side.right { padding: 8px 10px; }
+    .timeline-side.left .timeline-content { border-right: none; border-left: 4px solid var(--violet-primary); text-align: left; }
+    .timeline-side.left .timeline-tags { justify-content: flex-start; }
     
     .certifications-grid {
         grid-template-columns: 1fr;
@@ -1450,7 +1532,7 @@ body {
 }
 
 /* Animation pour la timeline */
-.timeline-item {
+.timeline-row {
     animation: slideInLeft 0.5s ease forwards;
 }
 

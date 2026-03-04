@@ -247,7 +247,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ANIMATION DE LA TIMELINE
     // ====================================
     
-    const timelineItems = document.querySelectorAll('.timeline-item');
+    const timelineItems = document.querySelectorAll('.timeline-row');
     
     const timelineObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry, index) => {
