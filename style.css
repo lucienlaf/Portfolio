@@ -1,11 +1,6 @@
 /* ====================================
    PORTFOLIO V2.0 - STYLE.CSS
    ====================================
-   ✅ Mode clair/sombre
-   ✅ Violet optimisé vidéoprojecteur
-   ✅ Skills avec barres animées
-   ✅ 4 projets + 4 certifications
-   ✅ Lottie animations intégrées
    
    PERSONNALISATION RAPIDE:
    - Couleurs: voir section VARIABLES CSS
@@ -164,28 +159,6 @@ body {
     border-color: var(--violet-primary);
     box-shadow: 0 0 15px var(--violet-glow);
 }
-
-/* ====================================
-   BARRE DE PROGRESSION
-   ==================================== */
-.scroll-progress {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: var(--bg-secondary);
-    z-index: 1000;
-}
-
-.progress-bar {
-    height: 100%;
-    background: linear-gradient(90deg, var(--violet-primary), var(--accent-primary));
-    width: 0%;
-    transition: width 0.1s ease;
-    box-shadow: 0 0 20px var(--violet-glow);
-}
-
 
 
 /* ====================================
@@ -1354,7 +1327,7 @@ body {
 .footer-content {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
 }

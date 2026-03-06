@@ -32,22 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.style.transition = '';
         }, 300);
     });
-
-    // ====================================
-    // BARRE DE PROGRESSION DU SCROLL
-    // ====================================
-    
-    const progressBar = document.querySelector('.progress-bar');
-    
-    function updateScrollProgress() {
-        const windowHeight = window.innerHeight;
-        const documentHeight = document.documentElement.scrollHeight;
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        
-        const scrollPercent = (scrollTop / (documentHeight - windowHeight)) * 100;
-        
-        progressBar.style.width = Math.min(scrollPercent, 100) + '%';
-    }
     
     // ====================================
     // NAVIGATION ACTIVE & SMOOTH SCROLL
