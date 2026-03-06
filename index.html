@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LAFORÊT Lucien - Portfolio BTS SIO</title>
     <link rel="stylesheet" href="style.css">
-    
-    <!-- Lottie Player CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript">
     (function(){
@@ -16,12 +14,15 @@
     </script>
 </head>
 <body>
-
-    <!-- Barre de progression du scroll -->
-    <div class="scroll-progress">
-        <div class="progress-bar"></div>
-        <div class="progress-percent">0%</div>
-    </div>
+<!-- TODO : 
+ - Rubriques "Mes compétences techniques" à modifier (comme benjamin) 
+ - Compétences C# : WPS, Windows Forms, Mawie
+ - Framework : entityframework, codeigniter, cakephp
+ - Enlever l'animation de ma photo qui bouge, et la mettre plus petite
+ - Rajouter ma rubrique "mes compétences professionnelles" (comme benjamin) + Portefeuille de compétences téléchargables
+ - Modifier/Ajouter la rubrique "Collectivité d'Alternance" (check sur le portfolio de benjamin)
+ - A mettre le projet Chifoumi, Memory, Style2Geek sur GitHub et mettre leur lien
+ - -->
 
     <!-- Switch Mode Clair/Sombre -->
     <div class="theme-switch-wrapper">
@@ -50,12 +51,10 @@
     <nav class="navbar">
         <ul class="nav-list">
             <li><a href="#accueil" class="nav-link active" data-section="accueil">Accueil</a></li>
-            <li><a href="#interets" class="nav-link" data-section="interets">Intérêts</a></li>
             <li><a href="#competences" class="nav-link" data-section="competences">Compétences</a></li>
             <li><a href="#projets" class="nav-link" data-section="projets">Projets</a></li>
             <li><a href="#formations" class="nav-link" data-section="formations">Formations</a></li>
             <li><a href="#entreprise" class="nav-link" data-section="entreprise">Entreprise</a></li>
-            <li><a href="#certifications" class="nav-link" data-section="certifications">Certifications</a></li>
             <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
         </ul>
     </nav>
@@ -85,7 +84,7 @@
     <!-- Page 2 - Centres d'intérêts & Objectifs -->
     <section id="interets" class="section">
         <div class="container">
-            <h2 class="section-title">Centres d'Intérêts & Objectifs</h2>
+            <h2 class="section-title">Centres d'Intérêts & Objectifs Professionnels</h2>
             <div class="interets-grid">
                 <div class="card card-interets">
                     <div class="card-icon">
@@ -146,141 +145,56 @@
     <section id="competences" class="section">
         <div class="container">
             <div class="section-header-with-lottie">
-                <h2 class="section-title">Mes Compétences</h2>
+                <h2 class="section-title">Mes Compétences Techniques</h2>
             </div>
-            
-            <div class="skills-container">
-                <div class="skill-item" data-percent="55" data-key="php">
-                    <div class="skill-header">
-                        <div class="skill-info">
-                            <img src="assets/img/logos/codeigniter.svg" alt="CodeIgniter" class="skill-logo" onerror="this.style.display='none'">
-                            <span class="skill-name">Framework CodeIgniter 4</span>
-                        </div>
-                        <span class="skill-percent">55%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 0%"></div>
-                    </div>
-                </div>
 
-                <div class="skill-item" data-percent="60" data-key="php">
-                    <div class="skill-header">
-                        <div class="skill-info">
-                            <img src="assets/img/logos/php.svg" alt="PHP" class="skill-logo" onerror="this.style.display='none'">
-                            <span class="skill-name">PHP</span>
-                        </div>
-                        <span class="skill-percent">60%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 0%"></div>
-                    </div>
+            <div class="skills-category">
+                <h3 class="skills-category-title">💾 Bases de données</h3>
+                <div class="skills-grid">
+                    <div class="skill-card"><img src="assets/img/logos/mysql.svg" alt="MySQL" class="skill-card-logo" onerror="this.style.display='none'"><h4>MySQL</h4></div>
+                    <div class="skill-card"><img src="assets/img/logos/mongodb.svg" alt="MongoDB" class="skill-card-logo" onerror="this.style.display='none'"><h4>MongoDB</h4></div>
+                    <div class="skill-card"><img src="assets/img/logos/mariadb.svg" alt="MariaDB" class="skill-card-logo" onerror="this.style.display='none'"><h4>MariaDB</h4></div>
+                    <div class="skill-card"><img src="assets/img/logos/sqlite.svg" alt="SQLite" class="skill-card-logo" onerror="this.style.display='none'"><h4>SQLite</h4></div>
+                    <div class="skill-card"><img src="assets/img/logos/datagrip.svg" alt="DataGrip" class="skill-card-logo" onerror="this.style.display='none'"><h4>DataGrip</h4></div>
+                    <div class="skill-card"><img src="assets/img/logos/phpmyadmin.svg" alt="PhpMyAdmin" class="skill-card-logo" onerror="this.style.display='none'"><h4>PhpMyAdmin</h4></div>
                 </div>
-
-                <div class="skill-item" data-percent="70" data-key="html">
-                    <div class="skill-header">
-                        <div class="skill-info">
-                            <img src="assets/img/logos/html.svg" alt="HTML" class="skill-logo" onerror="this.style.display='none'">
-                            <span class="skill-name">HTML</span>
-                        </div>
-                        <span class="skill-percent">70%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 0%"></div>
-                    </div>
-                </div>
-
-                <div class="skill-item" data-percent="25" data-key="css">
-                    <div class="skill-header">
-                        <div class="skill-info">
-                            <img src="assets/img/logos/css.svg" alt="CSS" class="skill-logo" onerror="this.style.display='none'">
-                            <span class="skill-name">CSS</span>
-                        </div>
-                        <span class="skill-percent">25%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 0%"></div>
-                    </div>
-                </div>
-
-                <div class="skill-item" data-percent="15" data-key="javascript">
-                    <div class="skill-header">
-                        <div class="skill-info">
-                            <img src="assets/img/logos/javascript.svg" alt="JavaScript" class="skill-logo" onerror="this.style.display='none'">
-                            <span class="skill-name">JavaScript</span>
-                        </div>
-                        <span class="skill-percent">15%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 0%"></div>
-                    </div>
-                </div>
-
-                <div class="skill-item" data-percent="75" data-key="mysql">
-                    <div class="skill-header">
-                        <div class="skill-info">
-                            <img src="assets/img/logos/mysql.svg" alt="MySQL" class="skill-logo" onerror="this.style.display='none'">
-                            <span class="skill-name">MySQL</span>
-                        </div>
-                        <span class="skill-percent">75%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 0%"></div>
-                    </div>
-                </div>
-
-                <div class="skill-item" data-percent="65" data-key="csharp">
-                    <div class="skill-header">
-                        <div class="skill-info">
-                            <img src="assets/img/logos/csharp.svg" alt="C#" class="skill-logo" onerror="this.style.display='none'">
-                            <span class="skill-name">C#</span>
-                        </div>
-                        <span class="skill-percent">65%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 0%"></div>
-                    </div>
-                </div>
-
-                <div class="skill-item" data-percent="55" data-key="python">
-                    <div class="skill-header">
-                        <div class="skill-info">
-                            <img src="assets/img/logos/python.svg" alt="Python" class="skill-logo" onerror="this.style.display='none'">
-                            <span class="skill-name">Python</span>
-                        </div>
-                        <span class="skill-percent">55%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 0%"></div>
-                    </div>
-                </div>
-
-                <div class="skill-item" data-percent="35" data-key="linux">
-                    <div class="skill-header">
-                        <div class="skill-info">
-                            <img src="assets/img/logos/linux.svg" alt="Linux" class="skill-logo" onerror="this.style.display='none'">
-                            <span class="skill-name">Linux</span>
-                        </div>
-                        <span class="skill-percent">35%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 0%"></div>
-                    </div>
-                </div>
-
-                <!-- Anglais enlevé, à voir si à remettre -->
-                <!-- <div class="skill-item" data-percent="100" data-key="anglais">
-                    <div class="skill-header">
-                        <div class="skill-info">
-                            <img src="assets/img/logos/english.svg" alt="Anglais" class="skill-logo" onerror="this.style.display='none'">
-                            <span class="skill-name">Anglais (BTS SIO)</span>
-                        </div>
-                        <span class="skill-percent">100%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 0%"></div>
-                    </div>
-                </div> -->
             </div>
+
+            <div class="skills-category">
+                <h3 class="skills-category-title">⌨️ Langages de programmation</h3>
+                <div class="skills-grid">
+                    <div class="skill-card"><img src="assets/img/logos/csharp.svg" alt="C#" class="skill-card-logo" onerror="this.style.display='none'"><h4>C#</h4></div>
+                    <div class="skill-card"><img src="assets/img/logos/html.svg" alt="HTML" class="skill-card-logo" onerror="this.style.display='none'"><h4>HTML</h4></div>
+                    <div class="skill-card"><img src="assets/img/logos/css.svg" alt="CSS" class="skill-card-logo" onerror="this.style.display='none'"><h4>CSS</h4></div>
+                    <div class="skill-card"><img src="assets/img/logos/javascript.svg" alt="JavaScript" class="skill-card-logo" onerror="this.style.display='none'"><h4>JavaScript</h4></div>
+                    <div class="skill-card"><img src="assets/img/logos/php.svg" alt="PHP" class="skill-card-logo" onerror="this.style.display='none'"><h4>PHP</h4></div>
+                    <div class="skill-card"><img src="assets/img/logos/python.svg" alt="Python" class="skill-card-logo" onerror="this.style.display='none'"><h4>Python</h4></div>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h3 class="skills-category-title">🛠️ Frameworks &amp; Outils de développement</h3>
+                <div class="skills-grid">
+                    <div class="skill-card"><img src="assets/img/logos/cakephp.svg" alt="CakePHP" class="skill-card-logo" onerror="this.style.display='none'"><h4>CakePHP</h4></div>
+                    <div class="skill-card"><img src="assets/img/logos/codeigniter.svg" alt="CodeIgniter 4" class="skill-card-logo" onerror="this.style.display='none'"><h4>CodeIgniter 4</h4></div>
+                    <div class="skill-card"><img src="assets/img/logos/entityframework.svg" alt="Entity Framework" class="skill-card-logo" onerror="this.style.display='none'"><h4>Entity Framework</h4></div>
+                    <div class="skill-card"><img src="assets/img/logos/vscode.svg" alt="VS Code" class="skill-card-logo" onerror="this.style.display='none'"><h4>VS Code</h4></div>
+                    <div class="skill-card"><img src="assets/img/logos/visualstudio.svg" alt="VS Community" class="skill-card-logo" onerror="this.style.display='none'"><h4>VS Community</h4></div>
+                    <div class="skill-card"><img src="assets/img/logos/phpstorm.svg" alt="PHPStorm" class="skill-card-logo" onerror="this.style.display='none'"><h4>PHPStorm</h4></div>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h3 class="skills-category-title">⚙️ Environnements &amp; Systèmes</h3>
+                <div class="skills-grid">
+                    <div class="skill-card"><img src="assets/img/logos/linux.svg" alt="Linux" class="skill-card-logo" onerror="this.style.display='none'"><h4>Linux</h4></div>
+                    <div class="skill-card"><img src="assets/img/logos/virtualbox.svg" alt="VirtualBox" class="skill-card-logo" onerror="this.style.display='none'"><h4>Virtual Box</h4></div>
+                    <div class="skill-card"><img src="assets/img/logos/wsl.svg" alt="WSL" class="skill-card-logo" onerror="this.style.display='none'"><h4>WSL Windows</h4></div>
+                    <div class="skill-card"><img src="assets/img/logos/powershell.svg" alt="PowerShell" class="skill-card-logo" onerror="this.style.display='none'"><h4>PowerShell</h4></div>
+                    <div class="skill-card"><img src="assets/img/logos/github.svg" alt="GitHub" class="skill-card-logo" onerror="this.style.display='none'"><h4>GitHub</h4></div>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -289,8 +203,6 @@
         <div class="container">
             <div class="section-header-with-lottie">
                 <h2 class="section-title">Mes Projets</h2>
-                <!-- Animation Lottie #3 - Projets -->
-                <div class="lottie-container lottie-small" id="lottie-projects" data-lottie="assets/lottie/project.json"></div>
             </div>
             
             <div class="projets-grid">
@@ -367,39 +279,23 @@
             <div class="timeline-dual">
                 <div class="timeline-axis"></div>
 
-                <!-- Ligne 1 : Stage droite -->
+                <!-- Ligne 4 : Formation gauche -->
                 <div class="timeline-row">
-                    <div class="timeline-side left empty"></div>
-                    <div class="timeline-center-dot"><div class="timeline-dot stage-dot"></div></div>
-                    <div class="timeline-side right">
-                        <div class="timeline-content stage">
-                            <div class="timeline-label">💼 Stage</div>
-                            <div class="timeline-date">Mai - Juin 2023</div>
-                            <h3>Stage CNAV - Tours Nord</h3>
-                            <p>Service Informatique, Masterisation et Brassage de baie</p>
-                            <div class="timeline-tags">
-                                <span class="tag">Support technique</span>
-                                <span class="tag">Infrastructure</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Ligne 2 : Stage droite -->
-                <div class="timeline-row">
-                    <div class="timeline-side left empty"></div>
-                    <div class="timeline-center-dot"><div class="timeline-dot stage-dot"></div></div>
-                    <div class="timeline-side right">
-                        <div class="timeline-content stage">
-                            <div class="timeline-label">💼 Stage</div>
-                            <div class="timeline-date">Janvier - Février 2023</div>
-                            <h3>Stage Artéfacts - Tours</h3>
-                            <p>HTML, CSS et JavaScript</p>
+                    <div class="timeline-side left">
+                        <div class="timeline-content formation">
+                            <div class="timeline-label">🎓 Formation</div>
+                            <div class="timeline-date">2024 - En cours</div>
+                            <h3>BTS SIO option SLAM</h3>
+                            <p>Services Informatiques aux Organisations, option :<br>Solutions Logicielles et Applications Métiers</p>
                             <div class="timeline-tags">
                                 <span class="tag">Développement Web</span>
+                                <span class="tag">Base de données</span>
+                                <span class="tag">Programmation</span>
                             </div>
                         </div>
                     </div>
+                    <div class="timeline-side right empty"></div>
+                    <div class="timeline-center-dot"><div class="timeline-dot"></div></div>
                 </div>
 
                 <!-- Ligne 3 : Formation gauche -->
@@ -417,69 +313,50 @@
                             </div>
                         </div>
                     </div>
-                    <div class="timeline-center-dot"><div class="timeline-dot"></div></div>
                     <div class="timeline-side right empty"></div>
+                    <div class="timeline-center-dot"><div class="timeline-dot"></div></div>
                 </div>
 
-                <!-- Ligne 4 : Formation gauche -->
+                <!-- Ligne 1 : Stage droite -->
                 <div class="timeline-row">
-                    <div class="timeline-side left">
-                        <div class="timeline-content formation">
-                            <div class="timeline-label">🎓 Formation</div>
-                            <div class="timeline-date">2024 - En cours</div>
-                            <h3>BTS SIO option SLAM</h3>
-                            <p>Services Informatiques aux Organisations, option :<br>Solutions Logicielles et Applications Métiers</p>
+                    <div class="timeline-side left empty"></div>
+                    <div class="timeline-side right">
+                        <div class="timeline-content stage">
+                            <div class="timeline-label">💼 Stage</div>
+                            <div class="timeline-date">Mai - Juin 2023</div>
+                            <h3>Stage CNAV - Tours Nord</h3>
+                            <p>Service Informatique, Masterisation et Brassage de baie</p>
                             <div class="timeline-tags">
-                                <span class="tag">Développement Web</span>
-                                <span class="tag">Base de données</span>
-                                <span class="tag">Programmation</span>
+                                <span class="tag">Support technique</span>
+                                <span class="tag">Infrastructure</span>
                             </div>
                         </div>
                     </div>
-                    <div class="timeline-center-dot"><div class="timeline-dot"></div></div>
-                    <div class="timeline-side right empty"></div>
+                    <div class="timeline-center-dot"><div class="timeline-dot stage-dot"></div></div>
+                </div>
+
+                <!-- Ligne 2 : Stage droite -->
+                <div class="timeline-row">
+                    <div class="timeline-side left empty"></div>
+                    <div class="timeline-side right">
+                        <div class="timeline-content stage">
+                            <div class="timeline-label">💼 Stage</div>
+                            <div class="timeline-date">Janvier - Février 2023</div>
+                            <h3>Stage Artéfacts - Tours</h3>
+                            <p>HTML, CSS et JavaScript</p>
+                            <div class="timeline-tags">
+                                <span class="tag">Développement Web</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-center-dot"><div class="timeline-dot stage-dot"></div></div>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <!-- Page 6 - Entreprise -->
-    <section id="entreprise" class="section">
-        <div class="container">
-            <h2 class="section-title">Mon Entreprise d'Alternance</h2>
-            <div class="entreprise-content">
-                <div class="entreprise-header">
-                    <div class="entreprise-photo">
-                        <img src="assets/img/sdis37.png" alt="SDIS 37" onerror="this.parentElement.innerHTML='<div class=projet-placeholder>SDIS 37</div>'">
-                    </div>
-                    <h3>SDIS 37</h3>
-                    <p class="entreprise-localisation">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
-                            <circle cx="12" cy="10" r="3"/>
-                        </svg>
-                        La Haute Limougère, Route de Saint-Roch, 37230 Fondettes
-                    </p>
-                </div>
-                <div class="entreprise-grid">
-                    <div class="entreprise-card">
-                        <h4>Secteur d'activité</h4>
-                        <p>Le SDIS 37 est chargé de l'analyse des risques et de la mise en place des moyens de secours. Il organise l'activité de l'ensemble des centres de sapeurs-pompiers du département 37.</p>
-                    </div>
-                    <div class="entreprise-card">
-                        <h4>Mes Missions</h4>
-                        <ul>
-                            <li>Améliorations d'outils WEB</li>
-                            <li>Support technique aux utilisateurs</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Page 7 - Certifications -->
+    <!-- Page 6 - Certifications -->
     <section id="certifications" class="section">
         <div class="container">
             <h2 class="section-title">Certifications & Diplômes</h2>
@@ -549,6 +426,41 @@
         </div>
     </section>
 
+    <!-- Page 7 - Entreprise -->
+    <section id="entreprise" class="section">
+        <div class="container">
+            <h2 class="section-title">Ma Collectivité d'Acceuil</h2>
+            <div class="entreprise-content">
+                <div class="entreprise-header">
+                    <div class="entreprise-photo">
+                        <img src="assets/img/sdis37.png" alt="SDIS 37" onerror="this.parentElement.innerHTML='<div class=projet-placeholder>SDIS 37</div>'">
+                    </div>
+                    <h3>SDIS 37</h3>
+                    <p class="entreprise-localisation">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        La Haute Limougère, Route de Saint-Roch, 37230 Fondettes
+                    </p>
+                </div>
+                <div class="entreprise-grid">
+                    <div class="entreprise-card">
+                        <h4>Secteur d'activité</h4>
+                        <p>Le SDIS 37 est chargé de l'analyse des risques et de la mise en place des moyens de secours. Il organise l'activité de l'ensemble des centres de sapeurs-pompiers du département 37.</p>
+                    </div>
+                    <div class="entreprise-card">
+                        <h4>Mes Principales Missions</h4>
+                        <ul>
+                            <li>Améliorations d'outils WEB</li>
+                            <li>Support technique aux utilisateurs</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Page 8 - Contact -->
     <section id="contact" class="section section-contact">
         <div class="container">
@@ -570,7 +482,7 @@
                         </svg>
                         <div>
                             <strong>Email</strong>
-                            <p>lucien.lafpro@gmail.com</p>
+                            <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4b273e28222e2565272a2d3b39240b2c262a222765282426">lucien.lafpro@gmail.com</a></p>
                         </div>
                     </div>
                     <div class="info-item">
@@ -636,8 +548,14 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <p>Copyright © LAFORÊT Lucien - 2025</p>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p class="footer-sub">&copy; 2025 Lucien LAFORÊT — Tous droits réservés</p>
+                </div>
+            </div>
+        </div>
     </footer>
-    <script src="script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>

@@ -38,7 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // ====================================
     
     const progressBar = document.querySelector('.progress-bar');
-    const progressPercent = document.querySelector('.progress-percent');
     
     function updateScrollProgress() {
         const windowHeight = window.innerHeight;
@@ -48,7 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const scrollPercent = (scrollTop / (documentHeight - windowHeight)) * 100;
         
         progressBar.style.width = Math.min(scrollPercent, 100) + '%';
-        progressPercent.textContent = Math.round(Math.min(scrollPercent, 100)) + '%';
     }
     
     // ====================================
@@ -247,7 +245,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ANIMATION DE LA TIMELINE
     // ====================================
     
-    const timelineItems = document.querySelectorAll('.timeline-row');
+    const timelineItems = document.querySelectorAll('.timeline-item');
     
     const timelineObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry, index) => {
