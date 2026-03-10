@@ -313,6 +313,33 @@ body {
     background: radial-gradient(circle at 30% 50%, var(--violet-glow), transparent 70%);
 }
 
+.section-cert {
+    position: relative;
+    background-color: #1C1040;
+    isolation: isolate;
+}
+
+.section-cert::before,
+.section-cert::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 80px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.section-cert::before {
+    top: 0;
+    background: linear-gradient(to bottom, #0F0A1E, transparent);
+}
+
+.section-cert::after {
+    bottom: 0;
+    background: linear-gradient(to top, #0F0A1E, transparent);
+}
+
 .accueil-content {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
@@ -386,13 +413,13 @@ body {
 
 .cta-button {
     display: inline-block;
-    padding: 16px 40px;
+    padding: 11px 26px;
     background: linear-gradient(135deg, var(--violet-primary), var(--violet-dark));
     color: white;
     text-decoration: none;
     border-radius: 30px;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 15px;
     transition: all 0.3s ease;
     border: 2px solid transparent;
     box-shadow: 0 4px 20px var(--violet-glow);
@@ -404,8 +431,111 @@ body {
     border-color: var(--accent-primary);
 }
 
+/* Bouton CV avec icône */
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.accueil-actions {
+    margin-top: 20px;
+}
+
+/* Logos accueil */
+.accueil-logos {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 6px;
+    margin-top: -20px;
+}
+
+.accueil-logo-img {
+    height: 90px;
+    width: auto;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
 /* ====================================
-   INTÉRÊTS
+   OBJECTIFS PROFESSIONNELS
+   ==================================== */
+.objectifs-pro-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.objectif-pro-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 32px 28px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.objectif-pro-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, var(--violet-primary), var(--accent-primary));
+    border-radius: 4px 0 0 4px;
+}
+
+.objectif-pro-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--violet-primary);
+    box-shadow: 0 16px 40px var(--shadow-color);
+}
+
+.objectif-pro-icon {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    background: linear-gradient(135deg, var(--violet-primary), var(--violet-dark));
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.objectif-pro-icon svg {
+    width: 26px;
+    height: 26px;
+    color: white;
+}
+
+.objectif-pro-content h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--violet-primary);
+    margin-bottom: 10px;
+}
+
+.objectif-pro-content p {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.objectif-pro-content strong {
+    color: var(--accent-primary);
+    font-weight: 600;
+}
+
+/* ====================================
+   INTÉRÊTS (conservé pour compat)
    ==================================== */
 .interets-grid {
     display: grid;
@@ -930,14 +1060,14 @@ body {
 /* ancien bloc timeline supprimé */
 
 /* ====================================
-   ENTREPRISE
+   collectivite
    ==================================== */
-.entreprise-header {
+.collectivite-header {
     text-align: center;
     margin-bottom: 50px;
 }
 
-.entreprise-photo {
+.collectivite-photo {
     width: 100%;
     max-width: 800px;
     height: 300px;
@@ -948,7 +1078,7 @@ body {
     box-shadow: 0 10px 30px var(--shadow-color);
 }
 
-.entreprise-photo img {
+.collectivite-photo img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -977,13 +1107,13 @@ body {
     font-size: 18px;
 }
 
-.entreprise-header h3 {
+.collectivite-header h3 {
     font-size: 36px;
     color: var(--violet-primary);
     margin-bottom: 15px;
 }
 
-.entreprise-localisation {
+.collectivite-localisation {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -992,17 +1122,17 @@ body {
     font-size: 16px;
 }
 
-.entreprise-localisation svg {
+.collectivite-localisation svg {
     color: var(--accent-primary);
 }
 
-.entreprise-grid {
+.collectivite-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
 }
 
-.entreprise-card {
+.collectivite-card {
     background: var(--bg-card);
     padding: 30px;
     border-radius: 20px;
@@ -1010,35 +1140,35 @@ body {
     transition: all 0.3s ease;
 }
 
-.entreprise-card:hover {
+.collectivite-card:hover {
     transform: translateY(-5px);
     border-color: var(--violet-primary);
     box-shadow: 0 15px 35px var(--shadow-color);
 }
 
-.entreprise-card h4 {
+.collectivite-card h4 {
     font-size: 22px;
     color: var(--violet-primary);
     margin-bottom: 15px;
 }
 
-.entreprise-card p {
+.collectivite-card p {
     color: var(--text-secondary);
     line-height: 1.7;
 }
 
-.entreprise-card ul {
+.collectivite-card ul {
     list-style: none;
 }
 
-.entreprise-card li {
+.collectivite-card li {
     padding: 10px 0;
     color: var(--text-secondary);
     position: relative;
     padding-left: 25px;
 }
 
-.entreprise-card li::before {
+.collectivite-card li::before {
     content: '✓';
     position: absolute;
     left: 0;
@@ -1051,9 +1181,17 @@ body {
    CERTIFICATIONS
    ==================================== */
 .certifications-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 24px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.certifications-grid .certification-card {
+    flex: 1;
+    min-width: 0;
 }
 
 .certification-card {
@@ -1432,7 +1570,7 @@ body {
         grid-template-columns: 1fr;
     }
     
-    .entreprise-grid {
+    .collectivite-grid {
         grid-template-columns: 1fr;
     }
 }
@@ -1541,7 +1679,7 @@ body {
 .card,
 .projet-card,
 .certification-card,
-.entreprise-card {
+.collectivite-card {
     animation: scaleIn 0.6s ease forwards;
 }
 

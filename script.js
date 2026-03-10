@@ -42,23 +42,24 @@ document.addEventListener('DOMContentLoaded', () => {
     
     function highlightActiveSection() {
         let currentSection = '';
-        const scrollPosition = window.pageYOffset + 200;
+        const scrollY = window.pageYOffset;
 
         sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.offsetHeight;
-            
-            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+            const top = section.offsetTop - 80;
+            const bottom = top + section.offsetHeight;
+            if (scrollY >= top && scrollY < bottom) {
                 currentSection = section.getAttribute('id');
             }
         });
 
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('data-section') === currentSection) {
-                link.classList.add('active');
-            }
-        });
+        if (currentSection) {
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('data-section') === currentSection) {
+                    link.classList.add('active');
+                }
+            });
+        }
     }
     
     // Smooth scroll pour les liens de navigation
@@ -67,6 +68,10 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             const targetId = link.getAttribute('href');
             const targetSection = document.querySelector(targetId);
+
+            // Mettre active immédiatement au clic
+            navLinks.forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
             
             if (targetSection) {
                 targetSection.scrollIntoView({

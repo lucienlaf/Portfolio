@@ -16,7 +16,6 @@
 <body>
 <!-- TODO : 
  - Rajouter ma rubrique "mes compétences professionnelles" (comme benjamin) + Portefeuille de compétences téléchargables
- - Modifier/Ajouter la rubrique "Collectivité d'Alternance" (check sur le portfolio de benjamin)
  - A mettre le projet Chifoumi, Memory, Style2Geek sur GitHub et mettre leur lien
  - -->
 
@@ -47,10 +46,10 @@
     <nav class="navbar">
         <ul class="nav-list">
             <li><a href="#accueil" class="nav-link active" data-section="accueil">Accueil</a></li>
+            <li><a href="#formations" class="nav-link" data-section="formations">Formations</a></li>
+            <li><a href="#collectivite" class="nav-link" data-section="collectivite">Collectivité</a></li>
             <li><a href="#competences" class="nav-link" data-section="competences">Compétences</a></li>
             <li><a href="#projets" class="nav-link" data-section="projets">Projets</a></li>
-            <li><a href="#formations" class="nav-link" data-section="formations">Formations</a></li>
-            <li><a href="#entreprise" class="nav-link" data-section="entreprise">Entreprise</a></li>
             <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
         </ul>
     </nav>
@@ -71,204 +70,25 @@
                         <p>Pris de passion par mon père dans l'informatique et ayant découvert le Développement, me voici 
                             étudiant en deuxième année de BTS Services Informatiques aux Organisations, spécialité Solutions Logicielles et Applications Métiers</p>
                     </div>
-                    <a href="#contact" class="cta-button">Me Contacter</a>
+                    <div class="accueil-logos">
+                        <img src="assets/img/iscb_logo.png" alt="ISCB" class="accueil-logo-img">
+                        <img src="assets/img/sdis37_logo.png" alt="SDIS 37" class="accueil-logo-img">
+                    </div>
+                    <div class="accueil-actions">
+                        <a href="assets/CV_LAFORÊT_Lucien.pdf" target="_blank" class="cta-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
+                                <polyline points="14 2 14 8 20 8"/>
+                            </svg>
+                            Mon CV
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Page 2 - Centres d'intérêts & Objectifs -->
-    <section id="interets" class="section">
-        <div class="container">
-            <h2 class="section-title">Centres d'Intérêts & Objectifs Professionnels</h2>
-            <div class="interets-grid">
-                <div class="card card-interets">
-                    <div class="card-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/>
-                        </svg>
-                    </div>
-                    <h3>Centres d'Intérêt</h3>
-                    <div class="interets-icons">
-                        
-                        <div class="interet-item" data-tooltip="Musculation">
-                            <img src="assets/img/logos/musculation.svg" alt="Musculation" onerror="this.style.display='none'">
-                            <span class="interet-fallback">💪</span>
-                            <p>Musculation</p>
-                        </div>
-                        <div class="interet-item" data-tooltip="Jeux vidéos">
-                            <img src="assets/img/logos/gaming.svg" alt="Jeux vidéos" onerror="this.style.display='none'">
-                            <span class="interet-fallback">🎮</span>
-                            <p>Jeux vidéos</p>
-                        </div>
-                        <div class="interet-item" data-tooltip="Animés/Mangas">
-                            <img src="assets/img/logos/anime.svg" alt="Animés/Mangas" onerror="this.style.display='none'">
-                            <span class="interet-fallback">📺</span>
-                            <p>Animés/Mangas</p>
-                        </div>
-                        <div class="interet-item" data-tooltip="Famille et Amis">
-                            <img src="assets/img/logos/family.svg" alt="Famille et Amis" onerror="this.style.display='none'">
-                            <span class="interet-fallback">👨‍👩‍👦</span>
-                            <p>Famille & Amis</p>
-                        </div>
-                        <div class="interet-item" data-tooltip="Projets personnels">
-                            <img src="assets/img/logos/projects.svg" alt="Projets personnels" onerror="this.style.display='none'">
-                            <span class="interet-fallback">💻</span>
-                            <p>Projets perso</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card card-objectifs">
-                    <div class="card-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="m22 11.08.12-3.67a2 2 0 0 0-2-2.12l-15.24.4a2 2 0 0 0-1.95 1.93l-.37 11.19a2 2 0 0 0 1.95 2.07l15.24-.4a2 2 0 0 0 1.95-1.93l.3-9.47"/>
-                            <path d="m21 11 2-2-2-2"/>
-                        </svg>
-                    </div>
-                    <h3>Objectifs Professionnels</h3>
-                    <ul class="objectifs-list">
-                        <li>Obtenir une Licence (BAC +3) en Concepteur Développeur d'Applications</li>
-                        <li>Concevoir et développer des applications web et mobiles concrètes, de l'idée à la mise en production, en portant une attention particulière à l'expérience utilisateur</li>
-                        <li>Développer des applications propres, bien testées et une expérience utilisateur soignée.</li>
-                        <li>Faire du développement mon métier en contribuant à la réussite de projets qui me permettent de monter en compétences</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Page 3 - Compétences -->
-    <section id="competences" class="section">
-        <div class="container">
-            <div class="section-header-with-lottie">
-                <h2 class="section-title">Mes Compétences Techniques</h2>
-            </div>
-
-            <div class="skills-category">
-                <h3 class="skills-category-title">💾 Bases de données</h3>
-                <div class="skills-grid">
-                    <div class="skill-card"><img src="assets/img/logos/mysql.svg" alt="MySQL" class="skill-card-logo" onerror="this.style.display='none'"><h4>MySQL</h4></div>
-                    <div class="skill-card"><img src="assets/img/logos/mongodb.svg" alt="MongoDB" class="skill-card-logo" onerror="this.style.display='none'"><h4>MongoDB</h4></div>
-                    <div class="skill-card"><img src="assets/img/logos/mariadb.svg" alt="MariaDB" class="skill-card-logo" onerror="this.style.display='none'"><h4>MariaDB</h4></div>
-                    <div class="skill-card"><img src="assets/img/logos/sqlite.svg" alt="SQLite" class="skill-card-logo" onerror="this.style.display='none'"><h4>SQLite</h4></div>
-                    <div class="skill-card"><img src="assets/img/logos/datagrip.svg" alt="DataGrip" class="skill-card-logo" onerror="this.style.display='none'"><h4>DataGrip</h4></div>
-                    <div class="skill-card"><img src="assets/img/logos/phpmyadmin.svg" alt="PhpMyAdmin" class="skill-card-logo" onerror="this.style.display='none'"><h4>PhpMyAdmin</h4></div>
-                </div>
-            </div>
-
-            <div class="skills-category">
-                <h3 class="skills-category-title">⌨️ Langages de programmation</h3>
-                <div class="skills-grid">
-                    <div class="skill-card"><img src="assets/img/logos/csharp.svg" alt="C#" class="skill-card-logo" onerror="this.style.display='none'"><h4>C#</h4></div>
-                    <div class="skill-card"><img src="assets/img/logos/html.svg" alt="HTML" class="skill-card-logo" onerror="this.style.display='none'"><h4>HTML</h4></div>
-                    <div class="skill-card"><img src="assets/img/logos/css.svg" alt="CSS" class="skill-card-logo" onerror="this.style.display='none'"><h4>CSS</h4></div>
-                    <div class="skill-card"><img src="assets/img/logos/javascript.svg" alt="JavaScript" class="skill-card-logo" onerror="this.style.display='none'"><h4>JavaScript</h4></div>
-                    <div class="skill-card"><img src="assets/img/logos/php.svg" alt="PHP" class="skill-card-logo" onerror="this.style.display='none'"><h4>PHP</h4></div>
-                    <div class="skill-card"><img src="assets/img/logos/python.svg" alt="Python" class="skill-card-logo" onerror="this.style.display='none'"><h4>Python</h4></div>
-                </div>
-            </div>
-
-            <div class="skills-category">
-                <h3 class="skills-category-title">🛠️ Frameworks &amp; Outils de développement</h3>
-                <div class="skills-grid">
-                    <div class="skill-card"><img src="assets/img/logos/cakephp.svg" alt="CakePHP" class="skill-card-logo" onerror="this.style.display='none'"><h4>CakePHP</h4></div>
-                    <div class="skill-card"><img src="assets/img/logos/codeigniter.svg" alt="CodeIgniter 4" class="skill-card-logo" onerror="this.style.display='none'"><h4>CodeIgniter 4</h4></div>
-                    <div class="skill-card"><img src="assets/img/logos/entityframework.svg" alt="Entity Framework" class="skill-card-logo" onerror="this.style.display='none'"><h4>Entity Framework</h4></div>
-                    <div class="skill-card"><img src="assets/img/logos/vscode.svg" alt="VS Code" class="skill-card-logo" onerror="this.style.display='none'"><h4>VS Code</h4></div>
-                    <div class="skill-card"><img src="assets/img/logos/visualstudio.svg" alt="VS Community" class="skill-card-logo" onerror="this.style.display='none'"><h4>VS Community</h4></div>
-                    <div class="skill-card"><img src="assets/img/logos/phpstorm.svg" alt="PHPStorm" class="skill-card-logo" onerror="this.style.display='none'"><h4>PHPStorm</h4></div>
-                </div>
-            </div>
-
-            <div class="skills-category">
-                <h3 class="skills-category-title">⚙️ Environnements &amp; Systèmes</h3>
-                <div class="skills-grid">
-                    <div class="skill-card"><img src="assets/img/logos/linux.svg" alt="Linux" class="skill-card-logo" onerror="this.style.display='none'"><h4>Linux</h4></div>
-                    <div class="skill-card"><img src="assets/img/logos/virtualbox.svg" alt="VirtualBox" class="skill-card-logo" onerror="this.style.display='none'"><h4>Virtual Box</h4></div>
-                    <div class="skill-card"><img src="assets/img/logos/wsl.svg" alt="WSL" class="skill-card-logo" onerror="this.style.display='none'"><h4>WSL Windows</h4></div>
-                    <div class="skill-card"><img src="assets/img/logos/powershell.svg" alt="PowerShell" class="skill-card-logo" onerror="this.style.display='none'"><h4>PowerShell</h4></div>
-                    <div class="skill-card"><img src="assets/img/logos/github.svg" alt="GitHub" class="skill-card-logo" onerror="this.style.display='none'"><h4>GitHub</h4></div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Page 4 - Projets -->
-    <section id="projets" class="section">
-        <div class="container">
-            <div class="section-header-with-lottie">
-                <h2 class="section-title">Mes Projets</h2>
-            </div>
-            
-            <div class="projets-grid">
-                <!-- Projet 1 -->
-                <div class="projet-card">
-                    <div class="projet-image">
-                        <img src="assets/img/projet1_chifoumi.PNG" alt="Jeu Chifoumi">
-                    </div>
-                    <div class="projet-content">
-                        <h3>Chifoumi</h3>
-                        <p>Mini-jeu consistant à choisir entre pierre, feuille ou ciseaux contre l'ordinateur avec un panel de customisation.</p>
-                        <div class="projet-tags">
-                            <span class="tag"><img src="assets/img/logos/csharp.svg" alt="C#" onerror="this.style.display='none'">C#</span>
-                        </div>
-                        <p class="projet-link">Projet non disponible au public</p>
-                    </div>
-                </div>
-
-                <!-- Projet 2 -->
-                <div class="projet-card">
-                    <div class="projet-image">
-                        <img src="assets/img/projet2_memory.PNG" alt="Jeu Memory">
-                    </div>
-                    <div class="projet-content">
-                        <h3>Memory</h3>
-                        <p>Mini-jeu consistant à choisir un nombre de paires et les images des cartes, le but est de retrouver les paires.</p>
-                        <div class="projet-tags">
-                            <span class="tag"><img src="assets/img/logos/csharp.svg" alt="C#" onerror="this.style.display='none'">C#</span>
-                        </div>
-                        <p class="projet-link">Projet non disponible au public</p>
-                    </div>
-                </div>
-
-                <!-- Projet 3 -->
-                <div class="projet-card">
-                    <div class="projet-image">
-                        <img src="assets/img/projet3_cyber4all.png" alt="Projet 3" onerror="this.parentElement.innerHTML='<div class=projet-placeholder>Projet 3</div>'">
-                    </div>
-                    <div class="projet-content">
-                        <h3>Cyber4All - Module Quiz</h3>
-                        <p>Site Web disposant d'un quizz avec des questions en rapport avec des thèmes et difficultés en cybersécurité.</p>
-                        <div class="projet-tags">
-                            <span class="tag"><img src="assets/img/logos/php.svg" alt="PHP" onerror="this.style.display='none'">PHP</span>
-                            <span class="tag"><img src="assets/img/logos/mysql.svg" alt="MySQL" onerror="this.style.display='none'">MySQL</span>
-                        </div>
-                        <a href="https://cyber4all.benjaminlorieul.fr/" class="projet-link" target="_blank">Projet disponible au public <em>(cliquer pour y accéder)</em></a>
-                    </div>
-                </div>
-
-                <!-- Projet 4 -->
-                <div class="projet-card">
-                    <div class="projet-image">
-                        <img src="assets/img/projet4_festivalorganisateur.png" alt="Projet 4" onerror="this.parentElement.innerHTML='<div class=projet-placeholder>Projet 4</div>'">
-                    </div>
-                    <div class="projet-content">
-                        <h3>Festival Organisateur</h3>
-                        <p>Application permettant de gérer des Tournois de jeux vidéo côté Organisateur.</p>
-                        <div class="projet-tags">
-                            <span class="tag"><img src="assets/img/logos/csharp.svg" alt="PHP" onerror="this.style.display='none'">C#</span>
-                        </div>
-                        <p class="projet-link">Projet non disponible au public</p>
-                    </div>
-                </div>
-
-                <!-- RAJOUTER PROJETS UHC ? (API + LOL + EASTER) -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Page 5 - Formations & Stages -->
+    <!-- Page 2 - Formations & Stages -->
     <section id="formations" class="section">
         <div class="container">
             <h2 class="section-title">Formations & Stages</h2>
@@ -352,8 +172,8 @@
         </div>
     </section>
 
-    <!-- Page 6 - Certifications -->
-    <section id="certifications" class="section">
+    <!-- Page 3 - Certifications & Diplômes -->
+    <section id="certifications" class="section section-cert">
         <div class="container">
             <h2 class="section-title">Certifications & Diplômes</h2>
             <div class="certifications-grid">
@@ -422,17 +242,17 @@
         </div>
     </section>
 
-    <!-- Page 7 - Entreprise -->
-    <section id="entreprise" class="section">
+    <!-- Page 4 - Ma Collectivité d'Accueil -->
+    <section id="collectivite" class="section">
         <div class="container">
             <h2 class="section-title">Ma Collectivité d'Acceuil</h2>
-            <div class="entreprise-content">
-                <div class="entreprise-header">
-                    <div class="entreprise-photo">
+            <div class="collectivite-content">
+                <div class="collectivite-header">
+                    <div class="collectivite-photo">
                         <img src="assets/img/sdis37.png" alt="SDIS 37" onerror="this.parentElement.innerHTML='<div class=projet-placeholder>SDIS 37</div>'">
                     </div>
                     <h3>SDIS 37</h3>
-                    <p class="entreprise-localisation">
+                    <p class="collectivite-localisation">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
                             <circle cx="12" cy="10" r="3"/>
@@ -440,12 +260,12 @@
                         La Haute Limougère, Route de Saint-Roch, 37230 Fondettes
                     </p>
                 </div>
-                <div class="entreprise-grid">
-                    <div class="entreprise-card">
+                <div class="collectivite-grid">
+                    <div class="collectivite-card">
                         <h4>Secteur d'activité</h4>
                         <p>Le SDIS 37 est chargé de l'analyse des risques et de la mise en place des moyens de secours. Il organise l'activité de l'ensemble des centres de sapeurs-pompiers du département 37.</p>
                     </div>
-                    <div class="entreprise-card">
+                    <div class="collectivite-card">
                         <h4>Mes Principales Missions</h4>
                         <ul>
                             <li>Améliorations d'outils WEB</li>
@@ -453,6 +273,199 @@
                         </ul>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page 5 - Objectifs Professionnels -->
+    <section id="interets" class="section section-cert">
+        <div class="container">
+            <h2 class="section-title">Objectifs Professionnels</h2>
+            <div class="objectifs-pro-grid">
+
+                <div class="objectif-pro-card">
+                    <div class="objectif-pro-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                            <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                        </svg>
+                    </div>
+                    <div class="objectif-pro-content">
+                        <h3>Licence Bac+3</h3>
+                        <p>Obtenir une Licence en <strong>Concepteur Développeur d'Applications</strong> pour approfondir mes compétences et valider mon parcours.</p>
+                    </div>
+                </div>
+
+                <div class="objectif-pro-card">
+                    <div class="objectif-pro-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect width="14" height="14" x="8" y="8" rx="2" ry="2"/>
+                            <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
+                        </svg>
+                    </div>
+                    <div class="objectif-pro-content">
+                        <h3>Développement Full-Stack</h3>
+                        <p>Concevoir et développer des <strong>applications web et mobiles</strong> concrètes, de l'idée à la mise en production, avec une attention particulière à l'expérience utilisateur.</p>
+                    </div>
+                </div>
+
+                <div class="objectif-pro-card">
+                    <div class="objectif-pro-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="16 18 22 12 16 6"/>
+                            <polyline points="8 6 2 12 8 18"/>
+                        </svg>
+                    </div>
+                    <div class="objectif-pro-content">
+                        <h3>Code de Qualité</h3>
+                        <p>Produire des applications <strong>propres, bien testées</strong> et maintenables, avec une expérience utilisateur soignée à chaque projet.</p>
+                    </div>
+                </div>
+
+                <div class="objectif-pro-card">
+                    <div class="objectif-pro-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 20h9"/>
+                            <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+                        </svg>
+                    </div>
+                    <div class="objectif-pro-content">
+                        <h3>Carrière en Dev</h3>
+                        <p>Faire du développement mon <strong>métier</strong>, en contribuant à des projets stimulants qui me permettent de progresser et monter en compétences.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Page 6 - Compétences Techniques -->
+    <section id="competences" class="section">
+        <div class="container">
+            <div class="section-header-with-lottie">
+                <h2 class="section-title">Mes Compétences Techniques</h2>
+            </div>
+
+            <div class="skills-category">
+                <h3 class="skills-category-title">💾 Bases de données</h3>
+                <div class="skills-grid">
+                    <div class="skill-card"><img src="assets/img/logos/mysql.svg" alt="MySQL" class="skill-card-logo" onerror="this.style.display='none'"><h4>MySQL</h4></div>
+                    <div class="skill-card"><img src="assets/img/logos/mongodb.svg" alt="MongoDB" class="skill-card-logo" onerror="this.style.display='none'"><h4>MongoDB</h4></div>
+                    <div class="skill-card"><img src="assets/img/logos/mariadb.svg" alt="MariaDB" class="skill-card-logo" onerror="this.style.display='none'"><h4>MariaDB</h4></div>
+                    <div class="skill-card"><img src="assets/img/logos/sqlite.svg" alt="SQLite" class="skill-card-logo" onerror="this.style.display='none'"><h4>SQLite</h4></div>
+                    <div class="skill-card"><img src="assets/img/logos/datagrip.svg" alt="DataGrip" class="skill-card-logo" onerror="this.style.display='none'"><h4>DataGrip</h4></div>
+                    <div class="skill-card"><img src="assets/img/logos/phpmyadmin.svg" alt="PhpMyAdmin" class="skill-card-logo" onerror="this.style.display='none'"><h4>PhpMyAdmin</h4></div>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h3 class="skills-category-title">⌨️ Langages de programmation</h3>
+                <div class="skills-grid">
+                    <div class="skill-card"><img src="assets/img/logos/csharp.svg" alt="C#" class="skill-card-logo" onerror="this.style.display='none'"><h4>C#</h4></div>
+                    <div class="skill-card"><img src="assets/img/logos/html.svg" alt="HTML" class="skill-card-logo" onerror="this.style.display='none'"><h4>HTML</h4></div>
+                    <div class="skill-card"><img src="assets/img/logos/css.svg" alt="CSS" class="skill-card-logo" onerror="this.style.display='none'"><h4>CSS</h4></div>
+                    <div class="skill-card"><img src="assets/img/logos/javascript.svg" alt="JavaScript" class="skill-card-logo" onerror="this.style.display='none'"><h4>JavaScript</h4></div>
+                    <div class="skill-card"><img src="assets/img/logos/php.svg" alt="PHP" class="skill-card-logo" onerror="this.style.display='none'"><h4>PHP</h4></div>
+                    <div class="skill-card"><img src="assets/img/logos/python.svg" alt="Python" class="skill-card-logo" onerror="this.style.display='none'"><h4>Python</h4></div>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h3 class="skills-category-title">🛠️ Frameworks &amp; Outils de développement</h3>
+                <div class="skills-grid">
+                    <div class="skill-card"><img src="assets/img/logos/cakephp.svg" alt="CakePHP" class="skill-card-logo" onerror="this.style.display='none'"><h4>CakePHP</h4></div>
+                    <div class="skill-card"><img src="assets/img/logos/codeigniter.svg" alt="CodeIgniter 4" class="skill-card-logo" onerror="this.style.display='none'"><h4>CodeIgniter 4</h4></div>
+                    <div class="skill-card"><img src="assets/img/logos/entityframework.svg" alt="Entity Framework" class="skill-card-logo" onerror="this.style.display='none'"><h4>Entity Framework</h4></div>
+                    <div class="skill-card"><img src="assets/img/logos/vscode.svg" alt="VS Code" class="skill-card-logo" onerror="this.style.display='none'"><h4>VS Code</h4></div>
+                    <div class="skill-card"><img src="assets/img/logos/visualstudio.svg" alt="VS Community" class="skill-card-logo" onerror="this.style.display='none'"><h4>VS Community</h4></div>
+                    <div class="skill-card"><img src="assets/img/logos/phpstorm.svg" alt="PHPStorm" class="skill-card-logo" onerror="this.style.display='none'"><h4>PHPStorm</h4></div>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h3 class="skills-category-title">⚙️ Environnements &amp; Systèmes</h3>
+                <div class="skills-grid">
+                    <div class="skill-card"><img src="assets/img/logos/linux.svg" alt="Linux" class="skill-card-logo" onerror="this.style.display='none'"><h4>Linux</h4></div>
+                    <div class="skill-card"><img src="assets/img/logos/virtualbox.svg" alt="VirtualBox" class="skill-card-logo" onerror="this.style.display='none'"><h4>Virtual Box</h4></div>
+                    <div class="skill-card"><img src="assets/img/logos/wsl.svg" alt="WSL" class="skill-card-logo" onerror="this.style.display='none'"><h4>WSL Windows</h4></div>
+                    <div class="skill-card"><img src="assets/img/logos/powershell.svg" alt="PowerShell" class="skill-card-logo" onerror="this.style.display='none'"><h4>PowerShell</h4></div>
+                    <div class="skill-card"><img src="assets/img/logos/github.svg" alt="GitHub" class="skill-card-logo" onerror="this.style.display='none'"><h4>GitHub</h4></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Page 7 - Projets -->
+    <section id="projets" class="section">
+        <div class="container">
+            <div class="section-header-with-lottie">
+                <h2 class="section-title">Mes Projets</h2>
+            </div>
+            
+            <div class="projets-grid">
+                <!-- Projet 1 -->
+                <div class="projet-card">
+                    <div class="projet-image">
+                        <img src="assets/img/projet1_chifoumi.PNG" alt="Jeu Chifoumi">
+                    </div>
+                    <div class="projet-content">
+                        <h3>Chifoumi</h3>
+                        <p>Mini-jeu consistant à choisir entre pierre, feuille ou ciseaux contre l'ordinateur avec un panel de customisation.</p>
+                        <div class="projet-tags">
+                            <span class="tag"><img src="assets/img/logos/csharp.svg" alt="C#" onerror="this.style.display='none'">C#</span>
+                        </div>
+                        <p class="projet-link">Projet non disponible au public</p>
+                    </div>
+                </div>
+
+                <!-- Projet 2 -->
+                <div class="projet-card">
+                    <div class="projet-image">
+                        <img src="assets/img/projet2_memory.PNG" alt="Jeu Memory">
+                    </div>
+                    <div class="projet-content">
+                        <h3>Memory</h3>
+                        <p>Mini-jeu consistant à choisir un nombre de paires et les images des cartes, le but est de retrouver les paires.</p>
+                        <div class="projet-tags">
+                            <span class="tag"><img src="assets/img/logos/csharp.svg" alt="C#" onerror="this.style.display='none'">C#</span>
+                        </div>
+                        <p class="projet-link">Projet non disponible au public</p>
+                    </div>
+                </div>
+
+                <!-- Projet 3 -->
+                <div class="projet-card">
+                    <div class="projet-image">
+                        <img src="assets/img/projet3_cyber4all.png" alt="Projet 3" onerror="this.parentElement.innerHTML='<div class=projet-placeholder>Projet 3</div>'">
+                    </div>
+                    <div class="projet-content">
+                        <h3>Cyber4All - Module Quiz</h3>
+                        <p>Site Web disposant d'un quizz avec des questions en rapport avec des thèmes et difficultés en cybersécurité.</p>
+                        <div class="projet-tags">
+                            <span class="tag"><img src="assets/img/logos/php.svg" alt="PHP" onerror="this.style.display='none'">PHP</span>
+                            <span class="tag"><img src="assets/img/logos/mysql.svg" alt="MySQL" onerror="this.style.display='none'">MySQL</span>
+                        </div>
+                        <a href="https://cyber4all.benjaminlorieul.fr/" class="projet-link" target="_blank">Projet disponible au public <em>(cliquer pour y accéder)</em></a>
+                    </div>
+                </div>
+
+                <!-- Projet 4 -->
+                <div class="projet-card">
+                    <div class="projet-image">
+                        <img src="assets/img/projet4_festivalorganisateur.png" alt="Projet 4" onerror="this.parentElement.innerHTML='<div class=projet-placeholder>Projet 4</div>'">
+                    </div>
+                    <div class="projet-content">
+                        <h3>Festival Organisateur</h3>
+                        <p>Application permettant de gérer des Tournois de jeux vidéo côté Organisateur.</p>
+                        <div class="projet-tags">
+                            <span class="tag"><img src="assets/img/logos/csharp.svg" alt="PHP" onerror="this.style.display='none'">C#</span>
+                        </div>
+                        <p class="projet-link">Projet non disponible au public</p>
+                    </div>
+                </div>
+
+                <!-- RAJOUTER PROJETS UHC ? (API + LOL + EASTER) -->
             </div>
         </div>
     </section>
@@ -478,7 +491,7 @@
                         </svg>
                         <div>
                             <strong>Email</strong>
-                            <p>lucien.lafpro@gmail.com</p>
+                            <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="abc7dec8c2cec585c7cacddbd9c4ebccc6cac2c785c8c4c6">[email&#160;protected]</a></p>
                         </div>
                     </div>
                     <div class="info-item">
