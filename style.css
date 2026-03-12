@@ -687,6 +687,115 @@ body {
 }
 
 /* ====================================
+   OBJECTIFS PRO
+   ==================================== */
+.objectifs-paragraphe {
+    max-width: 780px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.objectifs-paragraphe p {
+    font-size: 18px;
+    line-height: 1.9;
+    color: var(--text-secondary);
+}
+
+.objectifs-paragraphe strong {
+    color: var(--violet-primary);
+    font-weight: 600;
+}
+
+/* ====================================
+   COMPÉTENCES PROFESSIONNELLES
+   ==================================== */
+.comp-pro-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.comp-pro-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 24px;
+    transition: all 0.3s ease;
+}
+
+.comp-pro-card:hover {
+    border-color: var(--violet-primary);
+    box-shadow: 0 8px 24px var(--shadow-color);
+    transform: translateY(-4px);
+}
+
+.comp-pro-card h4 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--violet-primary);
+    margin-bottom: 14px;
+}
+
+.comp-pro-card h4 svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    color: var(--accent-primary);
+}
+
+.comp-pro-card ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.comp-pro-card li {
+    font-size: 13px;
+    color: var(--text-secondary);
+    padding-left: 16px;
+    position: relative;
+    line-height: 1.5;
+}
+
+.comp-pro-card li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #4ADE80;
+    font-size: 13px;
+    font-weight: 700;
+    top: 0;
+}
+
+
+
+.btn-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 32px;
+    background: linear-gradient(135deg, var(--violet-primary), var(--violet-dark));
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px var(--violet-glow);
+    margin: 0 auto;
+}
+
+.btn-download:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px var(--violet-glow);
+}
+
+/* ====================================
    COMPÉTENCES
    ==================================== */
 .skills-container {
@@ -1545,6 +1654,10 @@ body {
    RESPONSIVE DESIGN
    ==================================== */
 @media (max-width: 1024px) {
+    .comp-pro-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .navbar {
         right: 20px;
         padding: 15px 10px;
@@ -1576,6 +1689,10 @@ body {
 }
 
 @media (max-width: 768px) {
+    .comp-pro-grid {
+        grid-template-columns: 1fr;
+    }
+
     .container {
         padding: 0 20px;
     }
