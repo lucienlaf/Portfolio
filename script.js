@@ -539,3 +539,70 @@ if (contactForm) {
             });
     });
 }
+// ====================================
+// MODALS PROJETS V2
+// ====================================
+(function() {
+    const overlay = document.getElementById('modal-overlay');
+    if (!overlay) return;
+
+    const projectMap = {
+        'chifoumi':   'modal-chifoumi',
+        'memory':     'modal-memory',
+        'cyber4all':  'modal-cyber4all',
+        'festival':   'modal-festival',
+    };
+
+    function openModal(projectKey) {
+        const modalId = projectMap[projectKey];
+        if (!modalId) return;
+        const modal = document.getElementById(modalId);
+        if (!modal) return;
+
+        // Hide any previously open modal
+        document.querySelectorAll('.modal-box').forEach(m => m.classList.remove('active'));
+
+        overlay.setAttribute('aria-hidden', 'false');
+        overlay.classList.add('active');
+        modal.classList.add('active');
+        modal.scrollTop = 0;
+        document.body.style.overflow = 'hidden';
+
+        // Focus close button for accessibility
+        const closeBtn = modal.querySelector('.modal-close');
+        if (closeBtn) setTimeout(() => closeBtn.focus(), 50);
+    }
+
+    function closeAllModals() {
+        overlay.classList.remove('active');
+        overlay.setAttribute('aria-hidden', 'true');
+        document.querySelectorAll('.modal-box').forEach(m => m.classList.remove('active'));
+        document.body.style.overflow = '';
+    }
+
+    // Open on card click / Enter key (supports both old .projet-card-v2 and new .projet-row)
+    document.querySelectorAll('.projet-card-v2, .projet-row').forEach(card => {
+        card.addEventListener('click', () => openModal(card.dataset.project));
+        card.addEventListener('keydown', e => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                openModal(card.dataset.project);
+            }
+        });
+    });
+
+    // Close on overlay click (outside modal)
+    overlay.addEventListener('click', e => {
+        if (e.target === overlay) closeAllModals();
+    });
+
+    // Close buttons
+    document.querySelectorAll('.modal-close').forEach(btn => {
+        btn.addEventListener('click', closeAllModals);
+    });
+
+    // Close on Escape
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape') closeAllModals();
+    });
+})();
