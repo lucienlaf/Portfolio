@@ -551,6 +551,8 @@ if (contactForm) {
         'memory':     'modal-memory',
         'cyber4all':  'modal-cyber4all',
         'festival':   'modal-festival',
+        'style2geek':   'modal-style2geek',
+        'dit':   'modal-dit',
     };
 
     function openModal(projectKey) {
